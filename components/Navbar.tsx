@@ -4,7 +4,6 @@ import {
 	NavigationMenuItem,
 	NavigationMenuLink,
 	NavigationMenuList,
-	navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -28,41 +27,31 @@ export default function Navbar() {
 						<NavigationMenuList>
 							<NavigationMenuItem>
 								<NavigationMenuLink asChild>
-									<Link href="#home" className={navigationMenuTriggerStyle()}>
-										Home
-									</Link>
+									<a href="#home">Home</a>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
 
 							<NavigationMenuItem>
 								<NavigationMenuLink asChild>
-									<Link href="#about" className={navigationMenuTriggerStyle()}>
-										About
-									</Link>
+									<a href="#about">About</a>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
 
 							<NavigationMenuItem>
 								<NavigationMenuLink asChild>
-									<Link href="#product" className={navigationMenuTriggerStyle()}>
-										Product
-									</Link>
+									<a href="#product">Product</a>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
 
 							<NavigationMenuItem>
 								<NavigationMenuLink asChild>
-									<Link href="#team" className={navigationMenuTriggerStyle()}>
-										Team
-									</Link>
+									<a href="#team">Team</a>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
 
 							<NavigationMenuItem>
 								<NavigationMenuLink asChild>
-									<Link href="#contact" className={navigationMenuTriggerStyle()}>
-										Contact
-									</Link>
+									<a href="#contact">Contact</a>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
 
