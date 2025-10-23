@@ -60,7 +60,7 @@ export default function Navbar() {
 
 					<div className="flex items-center gap-2">
 						<Button variant="ghost">Log in</Button>
-						<Button className="bg-linear-to-br from-blue-600 to-indigo-700">Get started</Button>
+						<Button className="bg-linear-to-br from-blue-500 to-indigo-600">Get started</Button>
 					</div>
 				</div>
 			</div>

@@ -15,6 +15,7 @@ const teamMembers: TeamMember[] = [
 	{
 		name: "Ricky Francis Rozario",
 		imageSource: "/team/ricky.jpeg",
+
 	}
 ]
 
@@ -22,7 +23,7 @@ const teamMembers: TeamMember[] = [
 export default function TeamSection() {
 	return (
 		<section id="team">
-			<h2 className="text-3xl sm:text-4xl font-extrabold text-center text-gray-900">
+			<h2 className="text-center">
 				Meet the Team
 			</h2>
 

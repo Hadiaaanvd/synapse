@@ -16,9 +16,9 @@ interface TeamMemberCardProps {
 
 export default function TeamMemberCard({ member }: TeamMemberCardProps) {
 	return (
-		<div className="w-56 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
-			<div className="relative h-64">
-				<div className="absolute inset-0 bg-linear-to-br from-blue-600 to-indigo-700" />
+		<div className="w-60 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
+			<div className="relative h-72">
+				<div className="absolute inset-0 bg-linear-to-br from-blue-500 to-indigo-600" />
 				<div className="absolute bottom-0 left-0 w-full h-2/3 bg-linear-to-b from-blue-50 to-white rounded-t-[3.5rem]" />
 
 				<div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -32,7 +32,7 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
 						/>
 					</div>
 
-					<p className="text-gray-900 font-semibold mt-4 text-xl text-center">{member.name}</p>
+					<p className="font-semibold mt-4 text-xl text-center px-4">{member.name}</p>
 
 					<div className="mt-4 flex space-x-2">
 						{member.linkedinUrl && (
