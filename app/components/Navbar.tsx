@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 import Link from "next/link";
 import {
 	NavigationMenu,
@@ -29,8 +28,8 @@ export default function Navbar() {
 						<NavigationMenuList>
 							<NavigationMenuItem>
 								<NavigationMenuLink asChild>
-									<Link href="#features" className={navigationMenuTriggerStyle()}>
-										Features
+									<Link href="#home" className={navigationMenuTriggerStyle()}>
+										Home
 									</Link>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
@@ -42,12 +41,36 @@ export default function Navbar() {
 									</Link>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
+
+							<NavigationMenuItem>
+								<NavigationMenuLink asChild>
+									<Link href="#product" className={navigationMenuTriggerStyle()}>
+										Product
+									</Link>
+								</NavigationMenuLink>
+							</NavigationMenuItem>
+
+							<NavigationMenuItem>
+								<NavigationMenuLink asChild>
+									<Link href="#team" className={navigationMenuTriggerStyle()}>
+										Team
+									</Link>
+								</NavigationMenuLink>
+							</NavigationMenuItem>
+
+							<NavigationMenuItem>
+								<NavigationMenuLink asChild>
+									<Link href="#contact" className={navigationMenuTriggerStyle()}>
+										Contact
+									</Link>
+								</NavigationMenuLink>
+							</NavigationMenuItem>
+
 						</NavigationMenuList>
 					</NavigationMenu>
 
 					<div className="flex items-center gap-2">
-						<Button variant="ghost">Log in</Button>
-						<Button>Sign up</Button>
+						<Button>Get Started</Button>
 					</div>
 				</div>
 			</div>
