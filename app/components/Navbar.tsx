@@ -70,6 +70,7 @@ export default function Navbar() {
 					</NavigationMenu>
 
 					<div className="flex items-center gap-2">
+						<Button variant="ghost">Log in</Button>
 						<Button>Get Started</Button>
 					</div>
 				</div>
