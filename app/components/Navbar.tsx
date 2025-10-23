@@ -20,7 +20,7 @@ export default function Navbar() {
 						<Image
 							src="/logo-full.svg"
 							alt="YourLogo"
-							width={128}
+							width={140}
 							height={32}
 						/>
 					</Link>
