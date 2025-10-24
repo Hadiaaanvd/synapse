@@ -4,11 +4,11 @@ export default function HomeSection() {
 	return (
 		<section
 			id="home"
-			className="flex py-24 sm:py-32 flex-col-reverse md:flex-row items-center md:justify-between gap-8"
+			className="h-screen flex items-center justify-between gap-8"
 		>
 			<div className="md:w-1/2 text-center md:text-left">
-				<h1 className="text-7xl sm:text-7xl font-extrabold">
-					Connecting universities{" "}
+				<h1 className="">
+					Connecting universities <br />
 					<span className="bg-linear-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
 						across borders
 					</span>

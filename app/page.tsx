@@ -4,30 +4,25 @@ import TeamSection from "@/components/TeamSection";
 
 export default function Home() {
   return (
-    <>
+    <main className="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-16">
       <Navbar />
-
-      <main>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div>
           <HomeSection />
 
-          <section id="about" className="py-24 sm:py-32">
+          <section id="about">
             {/* About content */}
           </section>
 
-          <section id="product" className="py-24 sm:py-32">
+          <section id="product">
             {/* Product content */}
           </section>
 
           <TeamSection />
 
-          <section id="contact" className="py-24 sm:py-32">
+          <section id="contact">
             {/* Contact content */}
           </section>
         </div>
-
-
-      </main>
-    </>
+    </main>
   );
 }
