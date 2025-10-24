@@ -4,7 +4,7 @@ import TeamSection from "@/components/TeamSection";
 
 export default function Home() {
   return (
-    <main className="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-16">
+    <main className="lg:container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-16">
       <Navbar />
       <div>
           <HomeSection />
