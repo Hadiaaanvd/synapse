@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Navbar />
 
-      <main className="bg-gray-50">
+      <main>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <HomeSection />
 

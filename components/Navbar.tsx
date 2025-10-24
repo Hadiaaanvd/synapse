@@ -30,7 +30,7 @@ export default function Navbar() {
 				<div className="flex h-16 items-center justify-between">
 					<Link href="/" className="font-bold text-xl">
 						<Image
-							src="/logo-full.svg"
+							src="/logo.svg"
 							alt="Synapse Logo"
 							width={140}
 							height={32}
@@ -42,7 +42,7 @@ export default function Navbar() {
 							{navSections.map((section) => (
 								<NavigationMenuItem key={section.name}>
 									<NavigationMenuLink asChild>
-										<a href={section.href} className={section.active ? "text-primary" : ""}>{section.name}</a>
+										<a href={section.href} className={section.active ? "font-bold" : ""}>{section.name}</a>
 									</NavigationMenuLink>
 								</NavigationMenuItem>
 							))}

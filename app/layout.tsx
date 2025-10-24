@@ -1,23 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import { config } from '@fortawesome/fontawesome-svg-core'
+import { bodyFont, headingFont } from "@/lib/fonts";
+
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import "./globals.css";
 
 config.autoAddCss = false
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   title: "Synapse",
+  description: "Tools that bring structure, speed, and focus to your work",
 };
 
 export default function RootLayout({
@@ -28,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${headingFont.variable} ${bodyFont.variable} antialiased dark  bg-background text-foreground`}
       >
         {children}
       </body>
