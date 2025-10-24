@@ -8,6 +8,20 @@ import {
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
+interface NavSection {
+	name: string;
+	href: string;
+	active?: boolean;
+}
+
+const navSections: NavSection[] = [
+	{ name: "Home", href: "#home", active: true },
+	{ name: "About", href: "#about" },
+	{ name: "Product", href: "#product" },
+	{ name: "Team", href: "#team" },
+	{ name: "Contact", href: "#contact" },
+];
+
 
 export default function Navbar() {
 	return (
@@ -17,7 +31,7 @@ export default function Navbar() {
 					<Link href="/" className="font-bold text-xl">
 						<Image
 							src="/logo-full.svg"
-							alt="YourLogo"
+							alt="Synapse Logo"
 							width={140}
 							height={32}
 						/>
@@ -25,42 +39,18 @@ export default function Navbar() {
 
 					<NavigationMenu>
 						<NavigationMenuList>
-							<NavigationMenuItem>
-								<NavigationMenuLink asChild>
-									<a href="#home">Home</a>
-								</NavigationMenuLink>
-							</NavigationMenuItem>
-
-							<NavigationMenuItem>
-								<NavigationMenuLink asChild>
-									<a href="#about">About</a>
-								</NavigationMenuLink>
-							</NavigationMenuItem>
-
-							<NavigationMenuItem>
-								<NavigationMenuLink asChild>
-									<a href="#product">Product</a>
-								</NavigationMenuLink>
-							</NavigationMenuItem>
-
-							<NavigationMenuItem>
-								<NavigationMenuLink asChild>
-									<a href="#team">Team</a>
-								</NavigationMenuLink>
-							</NavigationMenuItem>
-
-							<NavigationMenuItem>
-								<NavigationMenuLink asChild>
-									<a href="#contact">Contact</a>
-								</NavigationMenuLink>
-							</NavigationMenuItem>
-
+							{navSections.map((section) => (
+								<NavigationMenuItem key={section.name}>
+									<NavigationMenuLink asChild>
+										<a href={section.href} className={section.active ? "text-primary" : ""}>{section.name}</a>
+									</NavigationMenuLink>
+								</NavigationMenuItem>
+							))}
 						</NavigationMenuList>
 					</NavigationMenu>
 
 					<div className="flex items-center gap-2">
-						<Button variant="ghost">Log in</Button>
-						<Button className="bg-linear-to-br from-blue-500 to-indigo-600">Get started</Button>
+						<Button>Get started</Button>
 					</div>
 				</div>
 			</div>
