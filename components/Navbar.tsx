@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { navSections } from "@/lib/sections"
-import NavbarToggle from "./ui/navbar-toggle"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { navSections } from "@/lib/sections";
+import NavbarToggle from "./ui/navbar-toggle";
 
 function NavLinksDesktop() {
   return (
-    <nav className="hidden md:flex items-center gap-8 lg:gap-12">
+    <nav className="hidden md:flex items-center gap-8 lg:gap-14">
       {navSections.map((section) => (
         <Link
           key={section.name}
@@ -24,17 +24,19 @@ function NavLinksDesktop() {
         </Link>
       ))}
 
-      <div className="flex items-center">
-        <Button variant="primary">
-          Get Started
-        </Button>
-      </div>
+      <Button variant="primary">Get Started</Button>
     </nav>
-  )
+  );
 }
 
-function MobileMenu({ open, onSelect }: { open: boolean; onSelect: () => void }) {
-  if (!open) return null
+function MobileMenu({
+  open,
+  onSelect,
+}: {
+  open: boolean;
+  onSelect: () => void;
+}) {
+  if (!open) return null;
 
   return (
     <div className="md:hidden w-full bg-background/80 backdrop-blur-md border-t border-border">
@@ -45,7 +47,7 @@ function MobileMenu({ open, onSelect }: { open: boolean; onSelect: () => void })
             href={section.href}
             className={cn(
               "text-sm text-foreground transition-colors duration-200",
-              section.active ? "font-semibold" : "text-foreground/80"
+              section.active ? "font-bold" : "text-foreground/80"
             )}
             onClick={onSelect}
           >
@@ -54,20 +56,20 @@ function MobileMenu({ open, onSelect }: { open: boolean; onSelect: () => void })
         ))}
       </nav>
     </div>
-  )
+  );
 }
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-background/10 backdrop-blur-md">
-      <div className="lg:container mx-auto flex h-15 sm:h-20 items-center justify-between px-4 sm:px-8 md:px-8 lg:px-16 xl:px-16">
-        <Link href="/" className="flex items-center">
+      <div className="lg:container mx-auto flex h-15 sm:h-20 items-center justify-between px-4 sm:px-8 md:px-8 lg:px-16 xl:px-20">
+        <Link href="/" className="flex items-center ml-[-3]">
           <Image
             src="/logo.svg"
             alt="Synapse Logo"
-            width={140}
+            width={150}
             height={32}
             priority
           />
@@ -82,5 +84,5 @@ export default function Navbar() {
 
       <MobileMenu open={open} onSelect={() => setOpen(false)} />
     </header>
-  )
+  );
 }

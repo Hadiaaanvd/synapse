@@ -1,4 +1,4 @@
-import TeamMemberCard, { TeamMember } from "./TeamMemberCard";
+import TeamMemberCard, { TeamMember } from "../TeamMemberCard";
 
 const teamMembers: TeamMember[] = [
 	{
@@ -18,7 +18,6 @@ const teamMembers: TeamMember[] = [
 
 	}
 ]
-
 
 export default function TeamSection() {
 	return (
