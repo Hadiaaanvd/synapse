@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Team from "@/components/sections/Team";
 import About from "@/components/sections/About";
 import Vision from "@/components/sections/Vision";
+import Footer from "@/components/sections/Footer";
 
 export default function Page() {
   return (
@@ -13,8 +14,7 @@ export default function Page() {
       <About />
       <Vision />
       <Team />
-      <section id="product"></section>
-      <section id="contact"></section>
+      <Footer />
 
     </main>
   );

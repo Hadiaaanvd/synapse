@@ -15,7 +15,7 @@ export default function About() {
           </h2>
         </div>
 
-        <div className="w-full md:w-1/2 max-w-[680px] text-sm flex flex-col gap-4 text-foreground lg:text-lg leading-relaxed">
+        <div className="w-full md:w-1/2 max-w-[680px] text-sm flex flex-col gap-4 text-foreground lg:text-xl leading-relaxed">
           <p>
             We believe in getting to know you, your industry, and your problem,
             intimately. We’re obsessive about detail and we know investing the
@@ -29,7 +29,7 @@ export default function About() {
           </p>
         </div>
       </div>
-       <div className="about-pill-gradient w-[70vw] mt-20 md:w-[50vw] lg:w-[40vw] md:block max-w-full h-30 md:h-40 lg:h-60" />
+       <div className="about-pill-gradient w-[70vw] mt-30 md:w-[50vw] lg:w-[40vw] md:block max-w-full h-30 md:h-42 lg:h-68" />
     </section>
   );
 }
