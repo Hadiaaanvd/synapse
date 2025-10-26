@@ -18,7 +18,7 @@ export default function Home() {
               height={24}
               className="mt-0.5 shrink-0 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
             />
-            <p className="text-foreground font-body text-sm sm:text-base md:text-lg leading-relaxed md:leading-snug max-w-[34ch]">
+            <p className="text-foreground font-body text-sm sm:text-base md:text-lg leading-relaxed md:leading-snug max-w-[26ch]">
               Tools that bring structure, speed, and focus to your work
             </p>
           </div>
@@ -41,10 +41,10 @@ export default function Home() {
           <Image
             src="/banner.png"
             alt="Banner"
-            width={450}
-            height={450}
+            width={650}
+            height={650}
             priority
-            className="h-auto max-w-[260px] sm:max-w-[320px] md:max-w-[320px] lg:max-w-[400px] xl:max-w-[450px]"
+            className="h-auto max-w-[320px] sm:max-w-[400px] lg:max-w-[460px] xl:max-w-[625px]"
           />
         </div>
       </div>

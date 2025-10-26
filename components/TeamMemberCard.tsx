@@ -16,25 +16,26 @@ interface TeamMemberCardProps {
 
 export default function TeamMemberCard({ member }: TeamMemberCardProps) {
 	return (
-		<div className="w-60 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
+		<div className="w-58 overflow-hidden rounded-[3.5rem] bg-white shadow-md">
 			<div className="relative h-72">
-				<div className="absolute inset-0 bg-linear-to-br from-blue-500 to-indigo-600" />
-				<div className="absolute bottom-0 left-0 w-full h-2/3 bg-linear-to-b from-blue-50 to-white rounded-t-[3.5rem]" />
+				<div className="absolute inset-0 bg-brand-gradient" />
+				<div className="absolute bottom-0 left-0 w-full h-2/3 bg-white/70 backdrop-blur-md rounded-t-[3.5rem]" />
+
 
 				<div className="absolute inset-0 flex flex-col items-center justify-center">
-					<div className="rounded-full border-4 border-white shadow-md overflow-hidden">
+					<div className="rounded-full border-4 border-primary shadow-md overflow-hidden">
 						<Image
 							src={member.imageSource}
 							alt={member.name}
-							width={128}
-							height={128}
+							width={110}
+							height={110}
 							className="rounded-full"
 						/>
 					</div>
 
-					<p className="font-semibold mt-4 text-xl text-center px-4">{member.name}</p>
+					<p className="font-semibold text-black mt-4 text-md text-center px-4">{member.name}</p>
 
-					<div className="mt-4 flex space-x-2">
+					<div className="mt-4 flex space-x-2 text-black text-xs">
 						{member.linkedinUrl && (
 							<a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer">
 								<FontAwesomeIcon icon={faLinkedin} size="xl" />

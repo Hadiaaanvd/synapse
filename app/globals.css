@@ -130,52 +130,53 @@
 
 @layer utilities {
   .page-gutters {
-    padding-left: 1.5rem; 
+    padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
   @media (min-width: 640px) {
     .page-gutters {
-      padding-left: 2rem;   
+      padding-left: 2rem;
       padding-right: 2rem;
     }
   }
   @media (min-width: 768px) {
     .page-gutters {
-      padding-left: 3rem;  
+      padding-left: 3rem;
       padding-right: 3rem;
     }
   }
   @media (min-width: 1024px) {
     .page-gutters {
-      padding-left: 4rem;  
+      padding-left: 4rem;
       padding-right: 4rem;
     }
   }
   @media (min-width: 1280px) {
     .page-gutters {
-      padding-left: 6rem;  
+      padding-left: 6rem;
       padding-right: 6rem;
     }
   }
 
   .section-spacing {
-    padding-top: 5rem;   
+    padding-top: 5rem;
     padding-bottom: 5rem;
   }
   @media (min-width: 768px) {
     .section-spacing {
-      padding-top: 7rem; 
+      padding-top: 7rem;
       padding-bottom: 7rem;
     }
   }
 
-  .hero-bg::before {
+  section:nth-child(odd)::before {
     content: "";
     position: absolute;
     width: 40vw;
     height: 40vw;
-    top: -20%;
+    top: 0;
     right: 0%;
+    border-radius: 50%;
     background: radial-gradient(
       ellipse at center,
       rgba(113, 56, 247, 0.488) 0%,
@@ -185,12 +186,13 @@
     z-index: -1;
   }
 
-  .hero-bg::after {
+  section:nth-child(even)::after {
     content: "";
     position: absolute;
+    border-radius: 50%;
     width: 40vw;
     height: 40vw;
-    bottom: -40%;
+    bottom: 0%;
     left: -10%;
     background: radial-gradient(
       ellipse at center,
@@ -202,8 +204,8 @@
   }
 
   .bg-brand-gradient {
-    background-image: linear-gradient(
-      to right,
+    background-image: radial-gradient(
+      circle at 0% 0%,
       var(--brand-gradient-start),
       var(--brand-gradient-end)
     );
@@ -216,12 +218,14 @@
     justify-content: center;
     border: 1px solid transparent;
     border-radius: var(--radius-pill);
-    background:
-      linear-gradient(var(--background), var(--background)) padding-box,
-      linear-gradient(to right,
-        var(--brand-gradient-start),
-        var(--brand-gradient-end)
-      ) border-box;
+    background: linear-gradient(var(--background), var(--background))
+        padding-box,
+      linear-gradient(
+          to right,
+          var(--brand-gradient-start),
+          var(--brand-gradient-end)
+        )
+        border-box;
   }
 
   .btn-secondary-inner {
@@ -257,16 +261,16 @@
     font-weight: 800;
     letter-spacing: 3.5px;
     text-transform: uppercase;
-    font-size: calc(25px + 4.3vw);
+    font-size: calc(36px + 3.5vw);
     line-height: 1.05;
   }
 
   h2 {
     font-family: var(--font-heading);
     font-weight: 800;
-    letter-spacing: 0.5px;
-    font-size: 2.25rem;
+    font-size: calc(28px + 1.3vw);
     line-height: 1.1;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
   }
 
@@ -276,4 +280,21 @@
     font-size: 1.875rem;
     line-height: 1.2;
   }
+}
+
+.about-pill-gradient,
+.vision-pill-gradient {
+  background-image: linear-gradient(
+    to right,
+    var(--brand-gradient-end),
+    var(--brand-gradient-start)
+  );
+  border-top-right-radius: 14rem;
+  border-bottom-right-radius: 14rem;
+}
+
+.vision-pill-gradient {
+  border-radius: 0;
+  border-top-left-radius: 14rem;
+  border-bottom-left-radius: 14rem;
 }
