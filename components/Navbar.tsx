@@ -69,7 +69,7 @@ export default function Navbar() {
           <Image
             src="/logo.svg"
             alt="Synapse Logo"
-            width={150}
+            width={160}
             height={32}
             priority
           />
