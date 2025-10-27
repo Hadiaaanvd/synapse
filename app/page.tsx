@@ -1,33 +1,21 @@
-import HomeSection from "@/components/HomeSection";
+import Home from "@/components/sections/Home";
 import Navbar from "@/components/Navbar";
-import TeamSection from "@/components/TeamSection";
+import Team from "@/components/sections/Team";
+import About from "@/components/sections/About";
+import Vision from "@/components/sections/Vision";
+import Footer from "@/components/sections/Footer";
 
-export default function Home() {
+export default function Page() {
   return (
-    <>
+    <main className="relative">
+
       <Navbar />
+      <Home />
+      <About />
+      <Vision />
+      <Team />
+      <Footer />
 
-      <main className="bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <HomeSection />
-
-          <section id="about" className="py-24 sm:py-32">
-            {/* About content */}
-          </section>
-
-          <section id="product" className="py-24 sm:py-32">
-            {/* Product content */}
-          </section>
-
-          <TeamSection />
-
-          <section id="contact" className="py-24 sm:py-32">
-            {/* Contact content */}
-          </section>
-        </div>
-
-
-      </main>
-    </>
+    </main>
   );
 }

@@ -1,4 +1,4 @@
-import TeamMemberCard, { TeamMember } from "./TeamMemberCard";
+import TeamMemberCard, { TeamMember } from "../TeamMemberCard";
 
 const teamMembers: TeamMember[] = [
 	{
@@ -15,20 +15,20 @@ const teamMembers: TeamMember[] = [
 	{
 		name: "Ricky Francis Rozario",
 		imageSource: "/team/ricky.jpeg",
-
-	}
+		linkedinUrl: "https://www.linkedin.com/in/ricky-francis-rozario-5b3b2521b/",
+		githubUrl: "https://github.com/rickyrozario"
+	},
 ]
-
 
 export default function TeamSection() {
 	return (
-		<section id="team" className="py-24 sm:py-32">
+		<section id="team" className="py-24 relative sm:py-48 min-h-screen">
 			<h2 className="text-center">
-				Meet the Team
+				Meet our <span className="text-primary">Team</span>
 			</h2>
 
 			<div className="pt-20">
-				<div className="flex flex-wrap justify-center gap-8">
+				<div className="flex flex-wrap justify-center gap-6">
 					{teamMembers.map((member, index) => (
 						<TeamMemberCard
 							key={index}
