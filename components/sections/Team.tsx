@@ -4,7 +4,6 @@ const teamMembers: TeamMember[] = [
 	{
 		name: "Nandor Krizbai",
 		imageSource: "/team/nandor.jpg",
-		linkedinUrl: "https://linkedin.com/in/hadia-naveed-b316911b5",
 		githubUrl: "https://github.com/nandor23"
 	},
 	{
