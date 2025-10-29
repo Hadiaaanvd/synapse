@@ -18,6 +18,12 @@ const teamMembers: TeamMember[] = [
 		linkedinUrl: "https://www.linkedin.com/in/ricky-francis-rozario-5b3b2521b/",
 		githubUrl: "https://github.com/rickyrozario"
 	},
+	{
+		name: "A F M Soyeb Chowdhury",
+		imageSource: "/team/soyeb.jpg",
+		linkedinUrl: "https://www.linkedin.com/in/a-f-m-soyeb-chowdhury-972a5099/",
+		githubUrl: "https://github.com/ifrat"
+	},
 ]
 
 export default function TeamSection() {
