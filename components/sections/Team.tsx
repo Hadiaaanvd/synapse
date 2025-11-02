@@ -30,8 +30,7 @@ const teamMembers: TeamMember[] = [
     linkedinUrl: "https://www.linkedin.com/in/dinesh-p-827690229/",
     githubUrl: "https://github.com/DineshPrabhakaran22",
   },
-  
-]
+];
 
 export default function TeamSection() {
   return (
