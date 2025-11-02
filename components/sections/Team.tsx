@@ -27,7 +27,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Dinesh Prabhakaran",
     imageSource: "/team/dinesh.jpg",
-    linkedinUrl: "www.linkedin.com/in/dinesh-prabhakaran-827690229",
+    linkedinUrl: "https://www.linkedin.com/in/dinesh-prabhakaran-827690229",
     githubUrl: "https://github.com/DineshPrabhakaran22",
   },
 ];
