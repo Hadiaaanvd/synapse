@@ -15,8 +15,8 @@ const teamMembers: TeamMember[] = [
 	{
 		name: "Ricky Francis Rozario",
 		imageSource: "/team/ricky.jpeg",
-		linkedinUrl: "https://www.linkedin.com/in/ricky-francis-rozario-5b3b2521b/",
-		githubUrl: "https://github.com/rickyrozario"
+		linkedinUrl: "https://www.linkedin.com/in/ricky-francis/",
+		githubUrl: "https://github.com/rickyfrancis"
 	},
 	{
 		name: "A F M Soyeb Chowdhury",
@@ -24,26 +24,29 @@ const teamMembers: TeamMember[] = [
 		linkedinUrl: "https://www.linkedin.com/in/a-f-m-soyeb-chowdhury-972a5099/",
 		githubUrl: "https://github.com/ifrat"
 	},
+  {
+    name: "Dinesh Prabhakaran",
+    imageSource: "/team/dinesh.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/dinesh-p-827690229/",
+    githubUrl: "https://github.com/DineshPrabhakaran22",
+  },
+  
 ]
 
 export default function TeamSection() {
-	return (
-		<section id="team" className="py-24 relative sm:py-48 min-h-screen">
-			<h2 className="text-center">
-				Meet our <span className="text-primary">Team</span>
-			</h2>
+  return (
+    <section id="team" className="py-24 relative sm:py-48 min-h-screen">
+      <h2 className="text-center">
+        Meet our <span className="text-primary">Team</span>
+      </h2>
 
-			<div className="pt-20">
-				<div className="flex flex-wrap justify-center gap-6">
-					{teamMembers.map((member, index) => (
-						<TeamMemberCard
-							key={index}
-							member={member}
-						/>
-					))}
-				</div>
-			</div>
-		</section>
-
-	);
+      <div className="pt-20">
+        <div className="flex flex-wrap justify-center gap-6">
+          {teamMembers.map((member, index) => (
+            <TeamMemberCard key={index} member={member} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
