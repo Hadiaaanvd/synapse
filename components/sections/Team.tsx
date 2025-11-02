@@ -24,12 +24,12 @@ const teamMembers: TeamMember[] = [
 		linkedinUrl: "https://www.linkedin.com/in/a-f-m-soyeb-chowdhury-972a5099/",
 		githubUrl: "https://github.com/ifrat"
 	},
-  {
-    name: "Dinesh Prabhakaran",
-    imageSource: "/team/dinesh.jpg",
-    linkedinUrl: "www.linkedin.com/in/dinesh-prabhakaran-827690229",
-    githubUrl: "https://github.com/DineshPrabhakaran22",
-  },
+	{
+		name: "Dinesh Prabhakaran",
+		imageSource: "/team/dinesh.jpg",
+		linkedinUrl: "https://www.linkedin.com/in/dinesh-prabhakaran-827690229",
+		githubUrl: "https://github.com/DineshPrabhakaran22",
+	},
 ];
 
 export default function TeamSection() {
