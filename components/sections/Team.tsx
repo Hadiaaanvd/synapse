@@ -14,7 +14,7 @@ const teamMembers: TeamMember[] = [
 	},
 	{
 		name: "Ricky Francis Rozario",
-		imageSource: "/team/ricky.jpeg",
+		imageSource: "/team/ricky.jpg",
 		linkedinUrl: "https://www.linkedin.com/in/ricky-francis/",
 		githubUrl: "https://github.com/rickyfrancis"
 	},
