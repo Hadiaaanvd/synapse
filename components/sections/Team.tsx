@@ -34,7 +34,7 @@ const teamMembers: TeamMember[] = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-24 relative sm:py-48 min-h-screen">
+    <section id="team" className="py-24 relative sm:py-48">
       <h2 className="text-center">
         Meet our <span className="text-primary">Team</span>
       </h2>
