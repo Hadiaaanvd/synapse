@@ -6,20 +6,20 @@ export default function Home() {
     <section id="home" className="relative z-0 hero-bg w-full">
       <div className="lg:container mx-auto md:pt-26 px-4 sm:px-8 md:px-8 lg:px-16 xl:px-20 min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-12">
         <div className="w-full md:w-1/2 max-w-[640px] flex flex-col gap-8 order-1 md:order-0">
-          <h1 className="text-center md:text-left">
-            Build Better <span className="block text-primary">Together</span>
+          <h1 className="text-center md:text-left mb-4 text-4xl sm:text-5xl md:text-[2.5em] lg:text-[4.3vw] xl:text-[4.1vw] leading-[1.05]">
+            Innovation<br /><span className="text-primary">Across</span> borders
           </h1>
 
-          <div className="flex flex-row items-start justify-center md:justify-start gap-2 md:gap-4 text-center md:text-left">
+          <div className="flex flex-row items-center justify-center md:justify-start gap-2 md:gap-4 text-center md:text-left">
             <Image
               src="/icons/bullet.svg"
               alt="bullet"
-              width={24}
-              height={24}
+              width={22}
+              height={22}
               className="mt-0.5 shrink-0 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
             />
-            <p className="text-foreground font-body text-sm sm:text-base md:text-lg leading-relaxed md:leading-snug max-w-[26ch]">
-              Tools that bring structure, speed, and focus to your work
+            <p className="text-foreground font-body text-sm sm:text-base md:text-md lg:text-lg leading-relaxed md:leading-snug max-w-[32ch]">
+             Creating Seamless Pathways for Cross-Campus Learning
             </p>
           </div>
 
@@ -44,7 +44,7 @@ export default function Home() {
             width={650}
             height={650}
             priority
-            className="h-auto max-w-[320px] sm:max-w-[400px] lg:max-w-[460px] xl:max-w-[625px]"
+            className="h-auto max-w-[320px] sm:max-w-[350px] lg:max-w-[420px] xl:max-w-[580px]"
           />
         </div>
       </div>

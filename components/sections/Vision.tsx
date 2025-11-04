@@ -7,16 +7,12 @@ export default function Vision() {
       <div className="lg:container mx-auto page-gutters flex flex-col md:flex-row gap-12 md:gap-16 relative z-1">
         <div className="w-full md:w-1/2 max-w-[680px] flex flex-col gap-8">
           <h2>
-            WE TAKE THE TIME TO
-            GET TO KNOW <span className="text-primary">YOU.</span>
+            Breaking borders in higher<span className="text-primary"> education.</span>
           </h2>
 
           <div className="text-sm flex flex-col gap-4 text-foreground lg:text-xl leading-relaxed">
             <p>
-              We believe in getting to know you, your industry, and your
-              problem, intimately. We’re obsessive about detail and we know
-              investing the time to understand you means better outcomes for
-              all.
+            We aim to establish the standard for how university alliances operate digitally. Students and staff will experience their alliance as one interconnected campus, where discovering and participating in cross-border activities requires no more effort than engaging with their home institution. Users can focus on academic work instead of administrative tasks.
             </p>
           </div>
         </div>
