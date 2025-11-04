@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Reveal from "../reveal";
 
 
@@ -19,8 +21,14 @@ export default function Vision() {
         <div className="w-full md:w-1/2 max-w-[680px] flex flex-col justify-end" />
       </div>
       <div className="flex justify-end">
-        <div className="vision-pill-gradient w-[70vw] mt-20 md:w-[50vw] lg:w-[40vw] md:block max-w-full h-30 md:h-42 lg:h-68" />
-      </div>
+           <motion.div
+    className="vision-pill-gradient w-[70vw] mt-20 md:w-[50vw] lg:w-[40vw] md:block max-w-full h-30 md:h-42 lg:h-68 rounded-r-[14rem]"
+    initial={{ x: 80, opacity: 0 }}
+    whileInView={{ x: 0, opacity: 1 }}
+    viewport={{ once: true, margin: "-10% 0px" }}
+    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+  />
+   </div>
     </section>
   );
 }

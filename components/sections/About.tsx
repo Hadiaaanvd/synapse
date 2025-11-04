@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 export default function About() {
   return (
   <section id="about" className="relative w-full overflow-hidden section-spacing">
@@ -23,7 +25,11 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="about-pill-gradient w-[70vw] mt-30 md:w-[50vw] lg:w-[40vw] h-30 md:h-42 lg:h-68 rounded-r-[14rem]" />
+      <motion.div
+        className="about-pill-gradient w-[70vw] mt-30 md:w-[50vw] lg:w-[40vw] h-30 md:h-42 lg:h-68 rounded-r-[14rem]"
+        initial={{ x:-80, opacity:0 }} whileInView={{ x:0, opacity:1 }}
+        viewport={{ once:true, margin:"-10% 0px" }} transition={{ duration:.6, ease:[.22,1,.36,1] }}
+      />
     </section>
   );
 }
