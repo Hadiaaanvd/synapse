@@ -47,7 +47,7 @@ export default function Navbar() {
               {section.name}
             </Link>
           ))}
-          <Button variant="primary">Get Started</Button>
+          <Button variant="primary" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>Get Started</Button>
         </nav>
 
         <div className="md:hidden">
