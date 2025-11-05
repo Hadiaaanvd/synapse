@@ -85,7 +85,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="btn-secondary-gradient btn-md mt-7 text-xs justify-center"
             >
-              <span className="inner">Open full page scheduler</span>
+              <span className="inner">Open Scheduler</span>
             </a>
 
             <p className="mt-3 text-xs text-foreground/60">

@@ -203,20 +203,31 @@
       linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(10, 10, 15, 1) 100%);
     background-repeat: no-repeat;
   }
-  Ï .section-gradient[data-variant="b"] {
-    --g1x: 110%;
-    --g1y: -10%;
-    --g2x: -20%;
-    --g2y: 90%;
-  }
-  .section-gradient[data-variant="c"] {
-    --g1x: 50%;
-    --g1y: -30%;
-    --g2x: 50%;
-    --g2y: 120%;
-  }
+  
+ .section-gradient[data-variant="b"] {
+  --g1x:110%;
+  --g1y:-10%;
+  --g2x:-20%;
+  --g2y:90%;
+}
+.section-gradient[data-variant="c"] {
+  --g1x:50%;
+  --g1y:-30%;
+  --g2x:50%;
+  --g2y:120%;
+}
+
 section{
   position: relative;
+}
+
+.section-gradient::before{
+  background:
+    radial-gradient(circle at 12% 82%, rgba(77,1,255,.50) 0%, rgba(0,45,223,.28) 26%, transparent 68%),
+    radial-gradient(circle at 86% 18%, rgba(88,0,255,.40) 0%, rgba(88,0,255,.22) 30%, transparent 70%),
+    linear-gradient(150deg, rgba(0,0,0,.88) 0%, rgba(10,10,15,1) 42%, rgba(0,0,0,1) 100%);
+  background-blend-mode: screen, lighten, normal;
+  opacity:.92;
 }
 
 .section-spotlight::after {
