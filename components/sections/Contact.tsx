@@ -4,18 +4,11 @@
 import { motion } from "framer-motion";
 import Reveal from "../reveal";
 
-const CAL_URL =
-  "https://calendly.com/hadiaaanvd/30min" +
-  "?hide_event_type_details=1" +
-  "&hide_gdpr_banner=1" +
-  "&background_color=000000" +
-  "&text_color=ffffff" +
-  "&primary_color=009ddf" +
-  "&utm_source=synapse_web&utm_medium=embed&utm_campaign=contact";
+const CAL_URL ="https://calendly.com/hadiaaanvd/30min";
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-spotlight noise section-compact">
+    <section id="contact" className="section-spotlight section-gradient noise section-compact"  data-variant="c">
       <div className="lg:container mx-auto page-gutters">
         <div className="contact-grid">
      
@@ -95,19 +88,19 @@ export default function Contact() {
           </motion.aside>
 
           <motion.div
-            className="contact-embed accent-ring"
+            className="contact-embed relative"
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div id="cal-skeleton" className="w-full h-[600px] md:h-[720px] rounded-2xl bg-white/5 animate-pulse" />
+            <div id="cal-skeleton" className="w-full max-h-[600px] md:max-h-[720px] rounded-2xl bg-white/5 animate-pulse" />
             <div className="embed-frame">
               <iframe
                 title="Synapse Scheduling"
                 src={CAL_URL}
                 loading="lazy"
-                className="w-full h-[600px] md:h-[720px]"
+                className="w-full h-full"
                 onLoad={() => {
                   const el = document.getElementById("cal-skeleton");
                   if (el) el.style.display = "none";

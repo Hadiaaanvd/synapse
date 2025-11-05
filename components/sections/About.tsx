@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 export default function About() {
   return (
-  <section id="about" className="relative w-full overflow-hidden section-spotlight section-spacing">
+  <section id="about" className="section-gradient relative w-full overflow-hidden section-spotlight section-spacing"  data-variant="c">
       <div className="absolute inset-0 pointer-events-none bg-surface-gradient opacity-[.35]" />
        <div className="relative lg:container mx-auto page-gutters flex flex-col md:flex-row gap-12 md:gap-16">
         <div className="w-full flex  md:flex-col gap-8">

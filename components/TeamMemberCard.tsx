@@ -32,14 +32,14 @@ export default function TeamMemberCard({ member }: { member: TeamMember }) {
         className="absolute -inset-px rounded-3xl pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(1,215,255,.005), rgba(88,0,255,.5))",
+            "linear-gradient(180deg, rgba(1,215,255,.005), rgba(88,0,255,.05))",
           opacity: 0.25,
           filter: "blur(10px)",
         }}
       />
 
       <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-10">
-        <div className="rounded-full p-[3px] bg-gradient-to-r from-brand-blue-light to-brand-violet ">
+        <div className="rounded-full p-[3px] bg-linear-to-r from-brand-blue-light to-brand-violet ">
           <Image
             src={member.imageSource}
             alt={member.name}

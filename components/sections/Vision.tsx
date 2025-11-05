@@ -6,7 +6,7 @@ export default function Vision() {
   return (
     <section
       id="vision"
-      className="section-gradient section-spotlight noise section-spacing"
+      className="section-gradient section-spotlight section-spacing"
       data-variant="c"
     >
       <p className="eyebrow lg:container page-gutters mb-3">Our Vision</p>
