@@ -39,7 +39,7 @@ export default function TeamMemberCard({ member }: { member: TeamMember }) {
       />
 
       <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-10">
-        <div className="rounded-full p-[3px] bg-gradient-to-r from-brand-blue-light to-brand-violet transition-transform duration-50 group-hover:scale-105">
+        <div className="rounded-full p-[3px] bg-gradient-to-r from-brand-blue-light to-brand-violet ">
           <Image
             src={member.imageSource}
             alt={member.name}
