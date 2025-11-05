@@ -1,9 +1,8 @@
-// app/layout.tsx
+
 import type { Metadata } from "next";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { bodyFont, headingFont } from "@/lib/fonts";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import SpotlightCursor from "@/components/ui/spotlight-cursor";
 import "./globals.css";
 
 config.autoAddCss = false;
@@ -18,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className="scroll-smooth">
       
       <body className={`${headingFont.variable} ${bodyFont.variable} antialiased bg-background text-foreground`}>
-        <SpotlightCursor />
+   
         {children}
       </body>
     </html>

@@ -1,10 +1,9 @@
 "use client";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {  useScroll, useTransform } from "framer-motion";
 
 import Reveal from "../reveal";
 import { useState } from "react";
-import Magnetic from "../ui/magnetic";
 
 export default function Home() {
   const { scrollY } = useScroll();
