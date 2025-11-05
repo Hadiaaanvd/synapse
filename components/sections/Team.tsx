@@ -20,7 +20,7 @@ export default function TeamSection() {
         <h2 className="text-center">Meet our <span className="text-primary">Team</span></h2>
       </Reveal>
 
-      <div className="mt-14 mx-auto max-w-[1160px] px-4 flex flex-col items-center gap-14 z-100">
+      <div className="mt-20 mx-auto max-w-[1160px] px-4 flex flex-col items-center gap-14 z-100">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-x-10 gap-y-16">
           {top.map((m, i) => <TeamMemberCard key={i} member={m} />)}
         </div>
