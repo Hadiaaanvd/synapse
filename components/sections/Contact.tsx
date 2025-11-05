@@ -15,7 +15,7 @@ const CAL_URL =
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-gradient noise section-compact">
+    <section id="contact" className="section-gradient section-spotlight noise section-compact">
       <div className="lg:container mx-auto page-gutters">
         <div className="contact-grid">
           {/* LEFT: pitch rail */}

@@ -12,7 +12,7 @@ const teamMembers: TeamMember[] = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="section-gradient noise py-24 sm:py-48" data-variant="b">
+    <section id="team" className="section-gradient section-spotlight noise py-24 sm:py-48" data-variant="b">
       <Reveal>
         <h2 className="text-center">Meet our <span className="text-primary">Team</span></h2>
       </Reveal>

@@ -5,7 +5,7 @@ import Reveal from "../reveal";
 
 export default function Vision() {
   return (
-    <section id="vision" className="section-gradient noise section-spacing" data-variant="c">
+    <section id="vision" className="section-gradient section-spotlight noise section-spacing" data-variant="c">
       <div className="lg:container mx-auto page-gutters flex flex-col md:flex-row gap-12 md:gap-16 relative z-1">
         <Reveal className="w-full md:w-1/2 max-w-[680px] flex flex-col gap-8">
           <h2>

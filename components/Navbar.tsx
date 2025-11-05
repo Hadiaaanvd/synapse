@@ -29,7 +29,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-background/40 backdrop-blur-md ">
+    <header className="fixed top-0 left-0 z-50 w-full bg-background/60 backdrop-blur-md ">
       <motion.div className="h-0.5 bg-primary/70 origin-left" style={{ scaleX: progress }} />
       <div className="lg:container mx-auto flex h-15 sm:h-20 items-center justify-between px-4 sm:px-8 md:px-8 lg:px-16 xl:px-20">
         <Link href="/" className="flex items-center ml-[-3]">
