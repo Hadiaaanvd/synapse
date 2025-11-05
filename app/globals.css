@@ -10,7 +10,7 @@
   --brand-blue-light: #01d7ff;
   --brand-blue-mid: #009ddf;
   --brand-violet: #5800ff;
-  --brand-violet-light: #8146ee;
+  --brand-violet-light: #8e5aefe7;
   --brand-black: #000000;
   --brand-white: #ffffff;
 
@@ -164,14 +164,14 @@
     pointer-events: none;
     background: radial-gradient(
         circle at 15% 85%,
-        rgba(77, 1, 255, 0.55) 0%,
-        rgba(0, 45, 223, 0.35) 25%,
+        rgba(77, 1, 255, 0.779) 0%,
+        rgba(0, 45, 223, 0.474) 25%,
         transparent 70%
       ),
       radial-gradient(
         circle at 85% 20%,
-        rgba(88, 0, 255, 0.45) 0%,
-        rgba(88, 0, 255, 0.25) 30%,
+        rgba(89, 0, 255, 0.649) 0%,
+        rgba(89, 0, 255, 0.392) 30%,
         transparent 75%
       ),
       linear-gradient(
@@ -227,29 +227,32 @@ section{
     radial-gradient(circle at 86% 18%, rgba(88,0,255,.40) 0%, rgba(88,0,255,.22) 30%, transparent 70%),
     linear-gradient(150deg, rgba(0,0,0,.88) 0%, rgba(10,10,15,1) 42%, rgba(0,0,0,1) 100%);
   background-blend-mode: screen, lighten, normal;
-  opacity:.92;
+  /* opacity:.92; */
+}
+
+.team-card{
+  z-index:100;
 }
 
 .section-spotlight::after {
-  z-index: 1000;
+  
   content: "";
-  position: fixed; /* fixed so it follows cursor globally */
+  position: fixed; 
   inset: 0;
-  z-index: 0;
+  z-index: 10;
   pointer-events: none;
   background: radial-gradient(
       30rem 22rem at var(--spot-x, 50%) var(--spot-y, 40%),
-      color-mix(in oklab, var(--brand-violet-light), transparent 65%) 0%,
+      color-mix(in oklab, var(--brand-violet), transparent 65%) 0%,
       transparent 100%
     );
-  filter: blur(25px) saturate(115%);
-  opacity: 0.6;
+  filter: blur(150px) saturate(105%);
+  opacity: 0.3;
   mix-blend-mode: screen;
   transition: background-position 0.1s ease-out;
 }
 
 
-  /* subtle tech grid underlay (optional in hero) */
   .hero-grid {
     position: absolute;
     inset: 0;
@@ -344,16 +347,6 @@ section{
     }
   }
 
-  .noise::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    mix-blend-mode: overlay;
-    opacity: 0.3;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/><feColorMatrix type='saturate' values='0'/><feComponentTransfer><feFuncA type='table' tableValues='0 0 .03 0'/></feComponentTransfer></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-  }
 
   .text-brand-gradient {
     background-image: linear-gradient(

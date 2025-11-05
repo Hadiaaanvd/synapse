@@ -17,7 +17,7 @@ export default function Home() {
   };
 
   return (
-    <section id="home" className="section-gradient noise section-spotlight min-h-screen"
+    <section id="home" className="section-gradient  section-spotlight min-h-screen"
       style={{ ['--mx' as any]: `${spot.x}%`, ['--my' as any]: `${spot.y}%` }} onMouseMove={onMove}>
       <div className="lg:container mx-auto md:pt-26 px-4 sm:px-8 md:px-8 lg:px-16 xl:px-20 min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-12">
 
@@ -39,14 +39,14 @@ export default function Home() {
 
           <Reveal delay={.2}>
             <div className="flex justify-center md:justify-start">
-              <Magnetic>
+            
                 <a className="btn-secondary-gradient">
                   <span className="inner">
                     Explore Now
                     <Image src="/icons/arrow.svg" alt="" width={24} height={24} className="-mr-1" />
                   </span>
                 </a>
-              </Magnetic>
+           
             </div>
           </Reveal>
         </div>

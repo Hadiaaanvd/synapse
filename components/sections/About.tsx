@@ -15,7 +15,7 @@ export default function About() {
           </h2>
         </div>
 
-        <div className="w-full text-justify text-sm flex flex-col gap-4 text-foreground lg:text-xl leading-relaxed">
+        <div className="w-full text-sm flex flex-col gap-2 text-foreground lg:text-xl leading-relaxed">
           <p className="eyebrow">Our Mission</p>
           <p>
             We simplify cross-border collaboration in higher education. Our
@@ -28,7 +28,7 @@ export default function About() {
       <motion.div
         className="about-pill-gradient w-[70vw] mt-30 md:w-[50vw] lg:w-[40vw] h-30 md:h-42 lg:h-68 rounded-r-[14rem]"
         initial={{ x:-80, opacity:0 }} whileInView={{ x:0, opacity:1 }}
-        viewport={{ once:true, margin:"-10% 0px" }} transition={{ duration:.6, ease:[.22,1,.36,1] }}
+        viewport={{ once:true, margin:"-10% 0px" }} transition={{ duration:.3, ease:[.22,1,.36,1] }}
       />
     </section>
   );

@@ -15,10 +15,10 @@ const CAL_URL =
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-gradient section-spotlight noise section-compact">
+    <section id="contact" className="section-spotlight noise section-compact">
       <div className="lg:container mx-auto page-gutters">
         <div className="contact-grid">
-          {/* LEFT: pitch rail */}
+     
           <motion.aside
             className="contact-rail"
             initial={{ opacity: 0, y: 14 }}
@@ -29,7 +29,7 @@ export default function Contact() {
             <Reveal>
               <p className="eyebrow">Scheduling</p>
               <h2 className="mt-2 headline-balance">
-                <span>Lets Talk</span>
+                <span>Let's <span className="text-primary">Talk</span></span>
               </h2>
               <p className="mt-3 text-foreground/85">
                 Schedule a live walkthrough and leave with concrete next steps
@@ -94,7 +94,6 @@ export default function Contact() {
             </p>
           </motion.aside>
 
-          {/* RIGHT: scheduler embed */}
           <motion.div
             className="contact-embed accent-ring"
             initial={{ opacity: 0, y: 14 }}
