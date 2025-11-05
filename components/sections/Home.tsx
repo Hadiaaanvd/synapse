@@ -52,10 +52,10 @@ export default function Home() {
         </div>
 
         <div className="w-full md:w-1/2 flex justify-center md:justify-end order-2 md:order-1 relative">
-          <motion.div style={{ y }} className="relative z-10 float-slow">
+       
             <Image src="/banner.png" alt="Banner" width={650} height={650}
               priority className="h-auto max-w-[320px] sm:max-w-[350px] lg:max-w-[420px] xl:max-w-[580px] drop-shadow-2xl animate-hue" />
-          </motion.div>
+     
         </div>
       </div>
     </section>
