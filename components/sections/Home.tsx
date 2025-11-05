@@ -39,7 +39,7 @@ export default function Home() {
           <Reveal>
             <div className="flex justify-center md:justify-start">
             
-                <a className="btn-secondary-gradient">
+                <a className="btn-secondary-gradient" href="#contact">
                   <span className="inner">
                     Explore Now
                     <Image src="/icons/arrow.svg" alt="" width={24} height={24} className="-mr-1" />

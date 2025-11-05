@@ -2,11 +2,11 @@ import Reveal from "../reveal";
 import TeamMemberCard, { TeamMember } from "../TeamMemberCard";
 
 const team: TeamMember[] = [
-  { name: "Nandor Krizbai", imageSource: "/team/nandor.jpg", description: "Ships fast React features with a bias for clarity and performance.", githubUrl: "https://github.com/nandor23" },
-  { name: "Hadia Naveed", imageSource: "/team/hadia.jpeg", description: "Turns complex flows into simple choices and designs that feel obvious.", linkedinUrl: "https://linkedin.com/in/hadia-naveed-b316911b5", githubUrl: "https://github.com/Hadiaaanvd" },
-  { name: "Ricky Francis Rozario", imageSource: "/team/ricky.jpg", description: "Bridges product to infra and keeps the pipeline green end to end.", linkedinUrl: "https://www.linkedin.com/in/ricky-francis/", githubUrl: "https://github.com/rickyfrancis" },
-  { name: "A F M Soyeb Chowdhury", imageSource: "/team/soyeb.jpg", description: "Builds reliable data paths and models that answer real questions.", linkedinUrl: "https://www.linkedin.com/in/a-f-m-soyeb-chowdhury-972a5099/", githubUrl: "https://github.com/ifrat" },
-  { name: "Dinesh Prabhakaran", imageSource: "/team/dinesh.jpg", description: "Delivers smooth native apps and trims every extra touch from flows.", linkedinUrl: "https://www.linkedin.com/in/dinesh-prabhakaran-827690229", githubUrl: "https://github.com/DineshPrabhakaran22" },
+  { name: "Nandor Krizbai", imageSource: "/team/nandor.jpg", description: "Ricky turns complex ideas into elegant, reliable software. His wide-ranging experience from university systems to modern web apps keeps the team aligned and delivery sharp.", githubUrl: "https://github.com/nandor23" },
+  { name: "Hadia Naveed", imageSource: "/team/hadia.jpeg", description: "Hadia blends creativity with clean engineering. She crafts interfaces that not only work beautifully but feel effortless, bringing a fresh, user-focused energy to Synapse.", linkedinUrl: "https://linkedin.com/in/hadia-naveed-b316911b5", githubUrl: "https://github.com/Hadiaaanvd" },
+  { name: "Ricky Francis Rozario", imageSource: "/team/ricky.jpg", description: "Ricky turns complex ideas into elegant, reliable software. His wide-ranging experience from university systems to modern web apps keeps the team aligned and delivery sharp.", linkedinUrl: "https://www.linkedin.com/in/ricky-francis/", githubUrl: "https://github.com/rickyfrancis" },
+  { name: "A F M Soyeb Chowdhury", imageSource: "/team/soyeb.jpg", description: "Soyeb’s balanced approach to academic insight and professional expertise to guide Synapse with clarity, precision, and purpose.", linkedinUrl: "https://www.linkedin.com/in/a-f-m-soyeb-chowdhury-972a5099/", githubUrl: "https://github.com/ifrat" },
+  { name: "Dinesh Prabhakaran", imageSource: "/team/dinesh.jpg", description: "Curious and inventive, Dinesh builds modern, high-impact web experiences. His enthusiasm for learning and experimenting helps Synapse stay ahead of the curve.", linkedinUrl: "https://www.linkedin.com/in/dinesh-prabhakaran-827690229", githubUrl: "https://github.com/DineshPrabhakaran22" },
 ];
 
 export default function TeamSection() {

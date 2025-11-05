@@ -50,7 +50,7 @@ export default function Footer() {
 
               <div className="flex flex-col gap-2 text-(--brand-white)/80">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/synapsetech2025"
                   className="hover:text-brand-white"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -58,7 +58,7 @@ export default function Footer() {
                   Facebook
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/synapsetech2025"
                   className="hover:text-brand-white"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -66,15 +66,15 @@ export default function Footer() {
                   Instagram
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/synapsetech2025"
                   className="hover:text-brand-white"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  YouTube
+                  LinkedIn
                 </a>
                 <a
-                  href="#"
+                  href="https://x.com/SynapseTech2025"
                   className="hover:text-brand-white"
                   target="_blank"
                   rel="noopener noreferrer"
