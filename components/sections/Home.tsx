@@ -36,8 +36,7 @@ export default function Home() {
               </p>
             </div>
           </Reveal>
-
-          <Reveal delay={.2}>
+          <Reveal>
             <div className="flex justify-center md:justify-start">
             
                 <a className="btn-secondary-gradient">
