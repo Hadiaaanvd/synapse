@@ -4,6 +4,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import { bodyFont, headingFont } from "@/lib/fonts";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
+import AnimatedCursor from "@/components/ui/spotlight-cursor";
 
 config.autoAddCss = false;
 
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      
+      <AnimatedCursor />
       <body className={`${headingFont.variable} ${bodyFont.variable} antialiased bg-background text-foreground`}>
    
         {children}

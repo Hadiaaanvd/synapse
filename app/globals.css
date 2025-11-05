@@ -1,4 +1,4 @@
-/* app/globals.css */
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -666,14 +666,11 @@ section{
   opacity: 0.28;
   z-index: -1;
 }
-
-/* balanced headline */
 .headline-balance {
   text-wrap: balance;
   letter-spacing: 0.01em;
 }
 
-/* chips and stat pills */
 .chip {
   display: inline-flex;
   align-items: center;
@@ -718,14 +715,11 @@ section{
     transparent
   );
 }
-
-/* button size helper */
 .btn-lg .inner {
   padding: 0.9rem 1.25rem;
   font-size: 1.05rem;
 }
 
-/* compact section rhythm */
 .section-compact {
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
@@ -737,7 +731,6 @@ section{
   }
 }
 
-/* reduced motion guard */
 @media (prefers-reduced-motion: reduce) {
   .float-slow,
   .animate-hue,
@@ -745,3 +738,6 @@ section{
     animation: none !important;
   }
 }
+
+
+@media (pointer:coarse){ html,body{ cursor:auto!important } }
