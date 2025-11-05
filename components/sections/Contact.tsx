@@ -100,7 +100,7 @@ export default function Contact() {
                 title="Synapse Scheduling"
                 src={CAL_URL}
                 loading="lazy"
-                className="w-full h-full"
+                className="w-full  h-[600px] md:h-[720px]"
                 onLoad={() => {
                   const el = document.getElementById("cal-skeleton");
                   if (el) el.style.display = "none";
