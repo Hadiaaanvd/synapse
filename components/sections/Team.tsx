@@ -2,7 +2,7 @@ import Reveal from "../reveal";
 import TeamMemberCard, { TeamMember } from "../TeamMemberCard";
 
 const team: TeamMember[] = [
-  { name: "Nandor Krizbai", imageSource: "/team/nandor.jpg", description: "Ricky turns complex ideas into elegant, reliable software. His wide-ranging experience from university systems to modern web apps keeps the team aligned and delivery sharp.", githubUrl: "https://github.com/nandor23" },
+  { name: "Nandor Krizbai", imageSource: "/team/nandor.jpg", description: "Nandor builds robust, scalable systems that keep Synapse running smoothly. His expertise in distributed architectures and performance optimization brings reliability to every project.", githubUrl: "https://github.com/nandor23" },
   { name: "Hadia Naveed", imageSource: "/team/hadia.jpeg", description: "Hadia blends creativity with clean engineering. She crafts interfaces that not only work beautifully but feel effortless, bringing a fresh, user-focused energy to Synapse.", linkedinUrl: "https://linkedin.com/in/hadia-naveed-b316911b5", githubUrl: "https://github.com/Hadiaaanvd" },
   { name: "Ricky Francis Rozario", imageSource: "/team/ricky.jpg", description: "Ricky turns complex ideas into elegant, reliable software. His wide-ranging experience from university systems to modern web apps keeps the team aligned and delivery sharp.", linkedinUrl: "https://www.linkedin.com/in/ricky-francis/", githubUrl: "https://github.com/rickyfrancis" },
   { name: "A F M Soyeb Chowdhury", imageSource: "/team/soyeb.jpg", description: "Soyeb’s balanced approach to academic insight and professional expertise to guide Synapse with clarity, precision, and purpose.", linkedinUrl: "https://www.linkedin.com/in/a-f-m-soyeb-chowdhury-972a5099/", githubUrl: "https://github.com/ifrat" },
