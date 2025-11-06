@@ -1,5 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 export default function Footer() {
   return (
@@ -86,12 +95,50 @@ export default function Footer() {
           </div>
         </div>
         <div className="h-px w-full bg-white/16" />
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[10px] sm:text-[11px] text-white/80">
-          <p>© Synapse Inc. All Rights Reserved 2025</p>
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[10px] sm:text-[14px] text-white/80">
+          <p>© Synapse Inc. All Rights Reserved 2025. This website does not belong to a real company.
+            It is a Planspiel Web Engineering project at the Technical University of Chemnitz.</p>
 
-          <Link href="#" className="hover:text-white text-white/80">
+          {/* <Link href="#" className="hover:text-white text-white/80">
             Terms &amp; Conditions
-          </Link>
+          </Link> */}
+
+          <Dialog>
+            <DialogTrigger>Imprint</DialogTrigger>
+            <DialogContent className="space-y-4">
+              <DialogHeader>
+                <DialogTitle>Imprint</DialogTitle>
+                <DialogDescription className="space-y-4 text-sm">
+                  <div className="mb-4">
+                    <strong>Administration</strong><br />
+                    Team Synapse
+                  </div>
+
+                  <div className="mb-4">
+                    Str. der Nationen 62<br />
+                    09111, Chemnitz, Germany
+                  </div>
+
+                  <div className="mb-4">
+                    Email: <a href="mailto:synapsetech4@gmail.com" className="text-blue-600 hover:underline">
+                      synapsetech4@gmail.com
+                    </a>
+                  </div>
+
+                  <div className="mb-4">
+                    <strong>Responsible person</strong><br />
+                    Nandor Krizbai
+                  </div>
+
+                  <div className="mb-4">
+                    <strong>Disclaimer</strong><br />
+                    This website does not belong to a real company. It is a Planspiel Web Engineering project at the Technical University of Chemnitz.
+                  </div>
+                </DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
+
         </div>
       </div>
     </footer>
