@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
+} from "@/components/ui/dialog";
 
 export default function Footer() {
   return (
@@ -26,7 +26,8 @@ export default function Footer() {
             </div>
 
             <p className="text-white leading-relaxed max-w-120">
-              Stay in the loop and sign up for the Synapse newsletter. Stay in the loop and sign up for the Synapse newsletter.
+              This website does not belong to a real company. It is a Planspiel
+              Web Engineering project at the Technical University of Chemnitz.
             </p>
           </div>
           <div className="flex flex-1 flex-row  gap-16 md:justify-between md:align-end md:max-w-1/3">
@@ -95,49 +96,50 @@ export default function Footer() {
         </div>
         <div className="h-px w-full bg-white/16" />
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[10px] sm:text-[14px] text-white/80">
-          <p>© Synapse Inc. All Rights Reserved 2025. This website does not belong to a real company.
-            It is a Planspiel Web Engineering project at the Technical University of Chemnitz.</p>
-
-          {/* <Link href="#" className="hover:text-white text-white/80">
-            Terms &amp; Conditions
-          </Link> */}
+          <p>© Synapse Inc. All Rights Reserved 2025. </p>
 
           <Dialog>
-            <DialogTrigger>Imprint</DialogTrigger>
+            <DialogTrigger className="border-b border-foreground text-xs  font-normal">
+              Imprint
+            </DialogTrigger>
             <DialogContent className="space-y-4">
               <DialogHeader>
-                <DialogTitle>Imprint</DialogTitle>
+                <DialogTitle className="tracking-[0.04em] leading-5">
+                  Imprint
+                </DialogTitle>
                 <DialogDescription className="space-y-4 text-sm">
-                  <div className="mb-4">
-                    <strong>Administration</strong><br />
+                  <div className="my-4">
+                    <strong className="text-foreground">Administration</strong>
+                    <br />
                     Team Synapse
                   </div>
 
+                  <strong className="text-foreground">Address</strong>
                   <div className="mb-4">
-                    Str. der Nationen 62<br />
+                    Str. der Nationen 62
+                    <br />
                     09111, Chemnitz, Germany
                   </div>
-
+                  <strong className="text-foreground">Contact</strong>
                   <div className="mb-4">
-                    Email: <a href="mailto:synapsetech4@gmail.com" className="text-blue-600 hover:underline">
+                    Email:
+                    <a
+                      href="mailto:synapsetech4@gmail.com"
+                      className="text-primary hover:underline"
+                    >
                       synapsetech4@gmail.com
                     </a>
                   </div>
-
+                  <strong className="text-foreground">Disclaimer</strong>
                   <div className="mb-4">
-                    <strong>Responsible person</strong><br />
-                    Nandor Krizbai
-                  </div>
-
-                  <div className="mb-4">
-                    <strong>Disclaimer</strong><br />
-                    This website does not belong to a real company. It is a Planspiel Web Engineering project at the Technical University of Chemnitz.
+                    This website does not belong to a real company. It is Ía
+                    Planspiel Web Engineering project at the Technical
+                    University of Chemnitz.
                   </div>
                 </DialogDescription>
               </DialogHeader>
             </DialogContent>
           </Dialog>
-
         </div>
       </div>
     </footer>

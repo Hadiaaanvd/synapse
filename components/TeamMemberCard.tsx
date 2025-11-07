@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -15,61 +14,53 @@ export interface TeamMember {
 export default function TeamMemberCard({ member }: { member: TeamMember }) {
   return (
     <div
-
-      className="
-        group relative isolate w-full max-w-[340px] my-6 rounded-3xl overflow-visible
-        border border-white/
-        px-6 pt-14 pb-6
-        backdrop-blur-xl
-        transition-all duration-300
-        shadow-[0_8px_24px_rgba(0,0,0,.35)]
-        hover:shadow-[0_14px_40px_rgba(1,215,255,.12)]
-      "
-    
+      className="group relative isolate w-full  max-w-[360px] my-6 rounded-3xl overflow-visible border bg-background/30  px-6 pt-16 pb-7 backdrop-blur-xl transition-all duration-400 hover:shadow-[0_14px_40px_rgba(1,215,255,.1) "
     >
-      <div
-        aria-hidden
-        className="absolute -inset-px rounded-3xl pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(1,215,255,.005), rgba(88,0,255,.05))",
-          opacity: 0.25,
-          filter: "blur(10px)",
-        }}
-      />
-
-      <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-10">
-        <div className="rounded-full p-[3px] bg-linear-to-r from-brand-blue-light to-brand-violet ">
-          <Image
-            src={member.imageSource}
-            alt={member.name}
-            width={96}
-            height={96}
-            className="rounded-full border border-white/2 shadow-md"
-          />
+      <div className="absolute -top-14 left-1/2 -translate-x-1/2 z-20">
+        <div className="relative group/avatar">
+          <div className="absolute -inset-2 bg-linear-to-br from-brand-blue-light to-brand-violet rounded-full blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300" />
+          <div className="absolute -inset-[3px] bg-linear-to-br from-brand-blue-light via-brand-violet to-brand-blue-light rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="relative rounded-full p-[3px] bg-linear-to-r from-brand-blue-light to-brand-violet transform group-hover:scale-110 transition-transform duration-300">
+            <div className="rounded-full p-1 bg-brand-black">
+              <Image
+                src={member.imageSource}
+                alt={member.name}
+                width={104}
+                height={104}
+                className="rounded-full border border-white/5 shadow-md w-[104px] h-[104px] object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
-      <header className="mt-4 text-center">
-        <h3 className="text-lg font-semibold tracking-wide">{member.name}</h3>
+      <header className="mt-6 text-center relative z-10">
+        <h3 className="text-xl font-bold tracking-wide text-foreground group-hover:text-brand-blue transition-all duration-500">
+          {member.name}
+        </h3>
+
+        <div className="relative h-0.5 w-12 mx-auto mt-3 mb-1 overflow-hidden">
+          <div className="absolute inset-0 bg-linear-to-r from-transparent via-brand-blue-light to-transparent opacity-30" />
+          <div className="absolute inset-0 bg-linear-to-r from-brand-blue-light via-brand-violet to-brand-blue-light transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+        </div>
       </header>
 
       {member.description && (
-        <p className="mx-auto mt-3 max-w-[18rem] text-sm leading-relaxed text-foreground/75 text-center">
+        <p className="mx-auto mt-4 max-w-[20rem] text-[0.9rem] leading-relaxed text-foreground/85 group-hover:text-foreground/90 text-center transition-colors duration-300 relative z-10">
           {member.description}
         </p>
       )}
 
-      <div className="mt-5 flex items-center justify-center gap-3">
+      <div className="mt-6 flex items-center justify-center gap-3 relative z-10">
         {member.linkedinUrl && (
           <a
             href={member.linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${member.name} LinkedIn`}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] transition-transform duration-200 hover:-translate-y-0.5 hover:border-brand-blue-light"
+            className="group/social relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand-blue-light/30  bg-white/4 transition-all duration-300 hover:border-brand-blue-light hover:bg-brand-blue-light/8 hover:shadow-[0_0_16px_rgba(1,215,255,0.2)] hover:scale-110 active:scale-95 hover:-translate-y-0.5"
           >
-            <FontAwesomeIcon icon={faLinkedin} />
+            <FontAwesomeIcon icon={faLinkedin} className="text-sm" />
           </a>
         )}
         {member.githubUrl && (
@@ -78,21 +69,23 @@ export default function TeamMemberCard({ member }: { member: TeamMember }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${member.name} GitHub`}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] transition-transform duration-200 hover:-translate-y-0.5 hover:border-brand-blue-light"
+            className="group/social relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand-blue-light/30  bg-white/4 transition-all duration-300 hover:border-brand-blue-light hover:bg-brand-blue-light/8 hover:shadow-[0_0_16px_rgba(1,215,255,0.2)] hover:scale-110 active:scale-95 hover:-translate-y-0.5"
           >
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faGithub} className="text-sm" />
           </a>
         )}
       </div>
 
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         style={{
           background:
-            "radial-gradient(80% 60% at 50% 0%, rgba(1,215,255,.08), transparent 75%)",
+            "radial-gradient(80% 60% at 50% 0%, rgba(1,215,255,.06), transparent 75%)",
         }}
       />
+
+      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-brand-blue-light to-transparent opacity-0  transition-opacity duration-500" />
     </div>
   );
 }

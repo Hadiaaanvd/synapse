@@ -1,8 +1,6 @@
-
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* brand tokens */
 :root {
   --radius-card: 1rem;
   --radius-pill: 9999px;
@@ -11,6 +9,7 @@
   --brand-blue-mid: #009ddf;
   --brand-violet: #5800ff;
   --brand-violet-light: #8e5aefe7;
+  --brand-violet-dark: #230553;
   --brand-black: #000000;
   --brand-white: #ffffff;
 
@@ -138,120 +137,34 @@
     }
   }
 
-  /* section field gradient (shared) */
-  .section-gradient {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    --g1x: -10%;
-    --g1y: -20%;
-    --g1w: 120rem;
-    --g1h: 80rem;
-    --g2x: 120%;
-    --g2y: 20%;
-    --g2w: 110rem;
-    --g2h: 70rem;
-    --base-mix: 4%;
-    --spot1-alpha: 70%;
-    --spot2-alpha: 75%;
-    --field-opacity: 0.8;
-  }
   .section-gradient::before {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background: radial-gradient(
-        circle at 15% 85%,
-        rgba(77, 1, 255, 0.779) 0%,
-        rgba(0, 45, 223, 0.474) 25%,
-        transparent 70%
-      ),
-      radial-gradient(
-        circle at 85% 20%,
-        rgba(89, 0, 255, 0.549) 0%,
-        rgba(89, 0, 255, 0.392) 30%,
-        transparent 75%
-      ),
-      linear-gradient(
-        145deg,
-        rgba(0, 0, 0, 0.85) 0%,
-        rgba(10, 10, 15, 1) 40%,
-        rgba(0, 0, 0, 1) 100%
-      );
+    background: linear-gradient(
+      145deg,
+
+     var(--brand-violet-dark) 0%,
+      rgb(0, 0, 0) 60%,
+      var(--brand-violet-dark) 100%
+    );
     background-blend-mode: screen, lighten, normal;
     opacity: 0.9;
   }
 
   .section-gradient {
-    --field-opacity: 1;
-    isolation: isolate;
     overflow: hidden;
   }
-  .section-gradient::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    background: radial-gradient(
-        circle at 50% 60%,
-        rgba(86, 1, 255, 0.06),
-        rgba(88, 0, 255, 0.03),
-        transparent 80%
-      ),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(10, 10, 15, 1) 100%);
-    background-repeat: no-repeat;
+
+  section {
+    position: relative;
   }
-  
- .section-gradient[data-variant="b"] {
-  --g1x:110%;
-  --g1y:-10%;
-  --g2x:-20%;
-  --g2y:90%;
-}
-.section-gradient[data-variant="c"] {
-  --g1x:50%;
-  --g1y:-30%;
-  --g2x:50%;
-  --g2y:120%;
-}
 
-section{
-  position: relative;
-}
-
-.section-gradient::before{
-  background:
-    radial-gradient(circle at 12% 82%, rgba(77,1,255,.50) 0%, rgba(0,45,223,.28) 26%, transparent 68%),
-    radial-gradient(circle at 86% 18%, rgba(88,0,255,.40) 0%, rgba(88,0,255,.22) 30%, transparent 70%),
-    linear-gradient(150deg, rgba(0,0,0,.88) 0%, rgba(10,10,15,1) 42%, rgba(0,0,0,1) 100%);
-  background-blend-mode: screen, lighten, normal;
-  /* opacity:.92; */
-}
-
-.team-card{
-  z-index:100;
-}
-
-.section-spotlight::after {
-  
-  content: "";
-  position: fixed; 
-  inset: 0;
-  z-index: 10;
-  pointer-events: none;
-  background: radial-gradient(
-      30rem 22rem at var(--spot-x, 50%) var(--spot-y, 40%),
-      color-mix(in oklab, var(--brand-violet), transparent 65%) 0%,
-      transparent 100%
-    );
-  filter: blur(500px) saturate(105%);
-  opacity: 0.0;
-  mix-blend-mode: screen;
-  transition: background-position 0.1s ease-out;
-}
-
+  .team-card {
+    z-index: 100;
+  }
 
   .hero-grid {
     position: absolute;
@@ -272,7 +185,6 @@ section{
     );
   }
 
-  /* decorative orbiters support */
   .orbit {
     position: absolute;
     inset: 0;
@@ -346,7 +258,6 @@ section{
       transform: rotate(360deg);
     }
   }
-
 
   .text-brand-gradient {
     background-image: linear-gradient(
@@ -494,54 +405,19 @@ section{
   }
 }
 
-/* fallback when color-mix unsupported */
-@supports not (color-mix(in oklab, red, blue)) {
-  .section-gradient::before {
-    background: radial-gradient(
-        var(--g1w) var(--g1h) at var(--g1x) var(--g1y),
-        rgba(88, 0, 255, 0.25) 0%,
-        transparent 60%
-      ),
-      radial-gradient(
-        var(--g2w) var(--g2h) at var(--g2x) var(--g2y),
-        rgba(90, 1, 255, 0.076) 0%,
-        transparent 60%
-      ),
-      linear-gradient(180deg, rgba(0, 157, 223, 0.06) 0%, var(--background) 40%);
-  }
-}
-
-/* section edge fade */
-.section-vignette {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background: radial-gradient(
-      120% 140% at 50% 0%,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.35) 85%
-    ),
-    radial-gradient(
-      120% 140% at 50% 100%,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.45) 85%
-    );
-}
-
-/* contact layout */
 .contact-grid {
   position: relative;
   z-index: 1;
   display: grid;
   gap: 1.25rem;
-  grid-template-columns: 1fr; /* mobile single column */
+  grid-template-columns: 1fr;
 }
+
 @media (min-width: 1024px) {
   .contact-grid {
     grid-template-columns: 1.6fr 1fr;
     gap: 2rem;
-  } /* left wider than right */
+  }
 }
 
 .contact-rail {
@@ -566,7 +442,7 @@ section{
   flex: none;
   width: 0.6rem;
   height: 0.6rem;
-  margin-top:2px;
+  margin-top: 2px;
   border-radius: 9999px;
   background: linear-gradient(
     90deg,
@@ -623,7 +499,6 @@ section{
     );
 }
 
-/* eyebrow */
 .eyebrow {
   width: fit-content;
   display: inline-block;
@@ -640,7 +515,6 @@ section{
   color: transparent;
 }
 
-/* accent ring */
 .accent-ring {
   position: relative;
 }
@@ -698,7 +572,6 @@ section{
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* soft divider */
 .hr-soft {
   height: 1px;
   width: 100%;
@@ -733,5 +606,9 @@ section{
   }
 }
 
-
-@media (pointer:coarse){ html,body{ cursor:auto!important } }
+@media (pointer: coarse) {
+  html,
+  body {
+    cursor: auto !important;
+  }
+}

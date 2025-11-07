@@ -8,17 +8,19 @@ const CAL_URL ="https://calendly.com/hadiaaanvd/30min";
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-spotlight section-gradient noise section-compact"  data-variant="c">
+    <section id="contact" className="section-gradient  section-compact"  data-variant="c">
+      
       <div className="lg:container mx-auto page-gutters">
         <div className="contact-grid">
      
           <motion.aside
-            className="contact-rail"
+            className="contact-rail bg-background/30 "
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           >
+            
             <Reveal>
               <p className="eyebrow">Scheduling</p>
               <h2 className="mt-2 headline-balance">
