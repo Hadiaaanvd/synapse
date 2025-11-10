@@ -67,7 +67,7 @@ export default function Footer() {
                   Facebook
                 </a>
                 <a
-                  href="https://www.instagram.com/synapsetech2025"
+                  href="https://www.linkedin.com/company/synapsee-tech/"
                   className="hover:text-brand-white"
                   target="_blank"
                   rel="noopener noreferrer"
