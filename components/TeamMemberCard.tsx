@@ -50,11 +50,13 @@ export default function TeamMemberCard({ member }: { member: TeamMember }) {
         </div>
       </header>
 
-      {member.description && (
-        <p className="mx-auto mt-4 max-w-[20rem] text-[0.9rem] leading-relaxed text-foreground/85 group-hover:text-foreground/90 text-center transition-colors duration-300 relative z-10">
-          {member.description}
-        </p>
-      )}
+      <div className="flex-1 flex flex-col">
+        {member.description && (
+          <p className="mx-auto mt-4 max-w-[20rem] text-[0.9rem] leading-relaxed text-foreground/85 group-hover:text-foreground/90 text-center transition-colors duration-300 relative z-10">
+            {member.description}
+          </p>
+        )}
+      </div>
 
       <div className="mt-6 flex items-center justify-center gap-3 relative z-10">
         {member.linkedinUrl && (
