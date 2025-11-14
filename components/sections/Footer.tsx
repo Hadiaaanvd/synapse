@@ -72,7 +72,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Instagram
+                  LinkedIn
                 </a>
                 <a
                   href="https://www.linkedin.com/company/synapsetech2025"
