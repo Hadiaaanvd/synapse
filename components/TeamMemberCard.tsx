@@ -14,7 +14,7 @@ export interface TeamMember {
 export default function TeamMemberCard({ member }: { member: TeamMember }) {
   return (
     <div
-      className="group relative isolate w-full  max-w-[360px] my-6 rounded-3xl overflow-visible border bg-background/30  px-6 pt-16 pb-7 backdrop-blur-xl transition-all duration-400 hover:shadow-[0_14px_40px_rgba(1,215,255,.1) "
+      className="group relative isolate w-full max-w-[360px] h-full my-6 rounded-3xl overflow-visible border bg-background/30 px-6 pt-16 pb-7 backdrop-blur-xl transition-all duration-400 hover:shadow-[0_14px_40px_rgba(1,215,255,.1)] flex flex-col"
     >
       <div className="absolute -top-14 left-1/2 -translate-x-1/2 z-20">
         <div className="relative group/avatar">
@@ -45,11 +45,13 @@ export default function TeamMemberCard({ member }: { member: TeamMember }) {
         </div>
       </header>
 
-      {member.description && (
-        <p className="mx-auto mt-4 max-w-[20rem] text-[0.9rem] leading-relaxed text-foreground/85 group-hover:text-foreground/90 text-center transition-colors duration-300 relative z-10">
-          {member.description}
-        </p>
-      )}
+      <div className="flex-1 flex flex-col">
+        {member.description && (
+          <p className="mx-auto mt-4 max-w-[20rem] text-[0.9rem] leading-relaxed text-foreground/85 group-hover:text-foreground/90 text-center transition-colors duration-300 relative z-10">
+            {member.description}
+          </p>
+        )}
+      </div>
 
       <div className="mt-6 flex items-center justify-center gap-3 relative z-10">
         {member.linkedinUrl && (

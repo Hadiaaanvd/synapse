@@ -18,7 +18,7 @@ export default function TeamSection() {
       </Reveal>
 
       <div className="mt-20 mx-auto max-w-[1400px] px-4">
-        <div className="flex flex-wrap justify-center gap-x-4 md:gap-x-6 xl:gap-x-6 gap-y-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-4 md:gap-x-6 xl:gap-x-6 gap-y-10">
           {team.map((m, i) => <TeamMemberCard key={i} member={m} />)}
         </div>
       </div>
