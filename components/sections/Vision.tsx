@@ -65,7 +65,6 @@ export default function Vision() {
             </p>
           </motion.div>
         </Reveal>
-        <div className="w-full md:w-1/2 max-w-[680px] flex flex-col justify-end" />
       </div>
 
       <div className="flex justify-end">
