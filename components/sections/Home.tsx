@@ -16,7 +16,7 @@ export default function Home() {
   };
 
   return (
-    <section id="home" className="section-gradient  section-spotlight min-h-screen" onMouseMove={onMove}>
+    <section id="home" className="section-gradient section-spotlight min-h-screen" data-variant="a" onMouseMove={onMove}>
       <div className="lg:container mx-auto md:pt-26 px-4 sm:px-8 md:px-8 lg:px-16 xl:px-20 min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-12">
 
         <div className="w-full md:w-1/2 max-w-[640px] flex flex-col gap-8 order-1 md:order-0">

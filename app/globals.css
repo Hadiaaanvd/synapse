@@ -19,10 +19,10 @@
   --background: var(--brand-black);
   --foreground: var(--brand-white);
 
-  --card: #0a0a0a;
+  --card: #121212;
   --card-foreground: var(--brand-white);
 
-  --popover: #0a0a0a;
+  --popover: #121212;
   --popover-foreground: var(--brand-white);
 
   --primary: var(--brand-blue-mid);
@@ -31,14 +31,14 @@
   --secondary: rgba(0, 0, 0, 0.6);
   --secondary-foreground: var(--brand-white);
 
-  --border: rgba(1, 215, 255, 0.4);
+  --border: rgba(1, 215, 255, 0.5);
   --border-accent: var(--brand-blue-light);
 
   --input: rgba(255, 255, 255, 0.07);
   --ring: var(--brand-blue-light);
 
   --muted: rgba(255, 255, 255, 0.07);
-  --muted-foreground: rgba(255, 255, 255, 0.6);
+  --muted-foreground: rgba(255, 255, 255, 0.7);
 
   --accent: rgba(255, 255, 255, 0.07);
   --accent-foreground: var(--brand-white);
@@ -145,13 +145,33 @@
     pointer-events: none;
     background: linear-gradient(
       145deg,
-
-     var(--brand-violet-dark) 0%,
+      var(--brand-violet-dark) 0%,
       rgb(0, 0, 0) 60%,
       var(--brand-violet-dark) 100%
     );
     background-blend-mode: screen, lighten, normal;
     opacity: 0.9;
+  }
+
+  /* Section variants for visual differentiation */
+  [data-variant="a"].section-gradient::before {
+    background: linear-gradient(
+      165deg,
+      var(--brand-violet-dark) 0%,
+      rgb(0, 0, 0) 70%,
+      rgba(1, 215, 255, 0.08) 100%
+    );
+    opacity: 0.85;
+  }
+
+  [data-variant="b"].section-gradient::before {
+    background: linear-gradient(
+      125deg,
+      rgba(1, 215, 255, 0.05) 0%,
+      rgb(0, 0, 0) 50%,
+      var(--brand-violet-dark) 100%
+    );
+    opacity: 0.8;
   }
 
   .section-gradient {
@@ -386,7 +406,7 @@
   h1 {
     font-family: var(--font-heading);
     font-weight: 800;
-    letter-spacing: 3.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
   }
   h2 {
@@ -457,7 +477,7 @@
   font-weight: 600;
 }
 .benefit-copy {
-  color: #c9c9c9;
+  color: #d4d4d4;
   font-size: 0.8rem;
 }
 

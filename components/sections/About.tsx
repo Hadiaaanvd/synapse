@@ -4,11 +4,12 @@ export default function About() {
   return (
   <section id="about" className="section-gradient relative w-full overflow-hidden section-spotlight section-spacing"  data-variant="c">
       <div className="absolute inset-0 pointer-events-none bg-surface-gradient opacity-[.35]" />
+      <p className="eyebrow lg:container page-gutters mb-3">Our Mission</p>
        <div className="relative lg:container mx-auto page-gutters flex flex-col md:flex-row gap-12 md:gap-16">
-        <div className="w-full flex  md:flex-col gap-8">
-         
+        <div className="w-full flex md:flex-col gap-8">
+
           <h2>
-            ONE PLATFORM FOR <br /> UNIVERSITY ALLIANCES&nbsp;
+            ONE PLATFORM FOR <br /> UNIVERSITY ALLIANCES
             <span className="block text-primary">
               CONNECTING STUDENTS AND INSTITUTIONS.
             </span>
@@ -16,7 +17,6 @@ export default function About() {
         </div>
 
         <div className="w-full text-sm flex flex-col gap-2 text-foreground lg:text-xl leading-relaxed">
-          <p className="eyebrow">Our Mission</p>
           <p>
             We simplify cross-border collaboration in higher education. Our
             platform centralizes information from multiple institutions into one
