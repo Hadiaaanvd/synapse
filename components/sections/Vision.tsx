@@ -9,16 +9,16 @@ export default function Vision() {
       className="section-gradient section-spotlight section-spacing"
       data-variant="c"
     >
-      <p className="eyebrow lg:container page-gutters mb-3">Our Vision</p>
-      <div className="lg:container page-gutters flex flex-col gap-8 relative z-1 max-w-[900px]">
+      <p className="eyebrow lg:container page-gutters mb-6">Our Vision</p>
+      <div className="lg:container page-gutters flex flex-col gap-10 relative z-1 max-w-[900px]">
 
         <Reveal className="w-full flex flex-col gap-8">
 
-          <h2>
+          <h2 className="leading-tight">
             Breaking borders in higher
             <span className="text-primary"> education.</span>
           </h2>
-          <div className="text-sm flex flex-col gap-4 text-foreground lg:text-xl leading-relaxed">
+          <div className="text-base flex flex-col gap-4 text-foreground/90 lg:text-xl leading-relaxed">
             <p>
               We aim to establish the standard for how university alliances
               operate digitally. Students and staff will experience their

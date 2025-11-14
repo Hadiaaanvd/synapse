@@ -19,31 +19,31 @@ export default function Home() {
     <section id="home" className="section-gradient section-spotlight min-h-screen" data-variant="a" onMouseMove={onMove}>
       <div className="lg:container mx-auto md:pt-26 px-4 sm:px-8 md:px-8 lg:px-16 xl:px-20 min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-12">
 
-        <div className="w-full md:w-1/2 max-w-[640px] flex flex-col gap-8 order-1 md:order-0">
+        <div className="w-full md:w-1/2 max-w-[640px] flex flex-col gap-10 order-1 md:order-0">
           <Reveal>
-            <h1 className="text-center md:text-left mb-4 text-4xl sm:text-5xl md:text-[2.5em] lg:text-[4.3vw] xl:text-[4.1vw] leading-[1.05]">
-              INNOVATION<br /><span className="text-brand-gradient">ACROSS</span> BORDERS
+            <h1 className="text-center md:text-left mb-2 text-4xl sm:text-5xl md:text-[2.8em] lg:text-[4.6vw] xl:text-[4.4vw] leading-[1.05] tracking-tight">
+              INNOVATION<br /><span className="text-brand-gradient drop-shadow-[0_0_30px_rgba(1,215,255,0.3)]">ACROSS</span> BORDERS
             </h1>
           </Reveal>
 
-          <Reveal delay={.1}>
-            <div className="flex items-center justify-center md:justify-start gap-3">
-              <Image src="/icons/bullet.svg" alt="" width={22} height={22} className="mt-0.5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
-              <p className="text-sm sm:text-base md:text-md lg:text-lg leading-relaxed md:leading-snug max-w-[42ch]">
+          <Reveal delay={.08}>
+            <div className="flex items-center justify-center md:justify-start gap-4">
+              <Image src="/icons/bullet.svg" alt="" width={24} height={24} className="mt-0.5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 flex-shrink-0" />
+              <p className="text-base sm:text-lg md:text-lg lg:text-xl leading-relaxed md:leading-relaxed max-w-[42ch] text-foreground/90">
                 Creating Seamless Pathways for Cross Campus Learning
               </p>
             </div>
           </Reveal>
-          <Reveal>
+          <Reveal delay={.12}>
             <div className="flex justify-center md:justify-start">
-            
-                <a className="btn-secondary-gradient" href="#contact">
+
+                <a className="btn-secondary-gradient btn-lg group/cta" href="#contact">
                   <span className="inner">
                     Explore Now
-                    <Image src="/icons/arrow.svg" alt="" width={24} height={24} className="-mr-1" />
+                    <Image src="/icons/arrow.svg" alt="" width={24} height={24} className="-mr-1 transition-transform duration-300 group-hover/cta:translate-x-1" />
                   </span>
                 </a>
-           
+
             </div>
           </Reveal>
         </div>

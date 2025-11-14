@@ -45,7 +45,7 @@ export default function TeamMemberCard({ member }: { member: TeamMember }) {
         </div>
       </header>
 
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col min-h-[180px]">
         {member.description && (
           <p className="mx-auto mt-4 max-w-[20rem] text-[0.9rem] leading-relaxed text-foreground/85 group-hover:text-foreground/90 text-center transition-colors duration-300 relative z-10">
             {member.description}
