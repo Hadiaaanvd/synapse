@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import Tilt from "./ui/tilt";
 
 export interface TeamMember {
   name: string;
@@ -13,9 +15,12 @@ export interface TeamMember {
 
 export default function TeamMemberCard({ member }: { member: TeamMember }) {
   return (
-    <div
-      className="group relative isolate w-full  max-w-[360px] my-6 rounded-3xl overflow-visible border bg-background/30  px-6 pt-16 pb-7 backdrop-blur-xl transition-all duration-400 hover:shadow-[0_14px_40px_rgba(1,215,255,.1) "
-    >
+    <Tilt max={5}>
+      <motion.div
+        className="group relative isolate w-full max-w-[360px] my-6 rounded-3xl overflow-visible border bg-background/30 px-6 pt-16 pb-7 backdrop-blur-xl transition-all duration-400 hover:shadow-[0_14px_40px_rgba(1,215,255,.1)]"
+        whileHover={{ scale: 1.02 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
       <div className="absolute -top-14 left-1/2 -translate-x-1/2 z-20">
         <div className="relative group/avatar">
           <div className="absolute -inset-2 bg-linear-to-br from-brand-blue-light to-brand-violet rounded-full blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300" />
@@ -85,7 +90,13 @@ export default function TeamMemberCard({ member }: { member: TeamMember }) {
         }}
       />
 
-      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-brand-blue-light to-transparent opacity-0  transition-opacity duration-500" />
-    </div>
+      <motion.div
+        className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-brand-blue-light to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
+      </motion.div>
+    </Tilt>
   );
 }

@@ -6,15 +6,33 @@ import Reveal from "../reveal";
 
 const CAL_URL ="https://calendly.com/hadiaaanvd/30min";
 
+const chipVariants = {
+  initial: { opacity: 0, scale: 0.8 },
+  animate: { opacity: 1, scale: 1 }
+};
+
 export default function Contact() {
   return (
-    <section id="contact" className="section-gradient  section-compact"  data-variant="c">
-      
+    <section id="contact" className="section-gradient section-compact relative overflow-hidden"  data-variant="c">
+      {/* Animated background */}
+      <motion.div
+        className="absolute -bottom-20 -left-20 w-96 h-96 bg-brand-violet/10 rounded-full blur-3xl"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.2, 0.35, 0.2],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+
       <div className="lg:container mx-auto page-gutters">
         <div className="contact-grid">
-     
+
           <motion.aside
-            className="contact-rail bg-background/30 "
+            className="contact-rail bg-background/30"
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -29,11 +47,17 @@ export default function Contact() {
               <p className="mt-3 text-foreground/85">
                 Schedule a live walkthrough and leave with concrete next steps
               </p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                <span className="chip">Cross campus discovery</span>
-                <span className="chip">Course mapping</span>
-                <span className="chip">Alliance operations</span>
-              </div>
+              <motion.div
+                className="mt-5 flex flex-wrap gap-2"
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                transition={{ staggerChildren: 0.1, delayChildren: 0.3 }}
+              >
+                <motion.span className="chip" variants={chipVariants}>Cross campus discovery</motion.span>
+                <motion.span className="chip" variants={chipVariants}>Course mapping</motion.span>
+                <motion.span className="chip" variants={chipVariants}>Alliance operations</motion.span>
+              </motion.div>
             </Reveal>
 
             <div className="hr-soft my-6" />
@@ -74,14 +98,16 @@ export default function Contact() {
               </li>
             </ul>
 
-            <a
+            <motion.a
               href={CAL_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary-gradient btn-md mt-7 text-xs justify-center"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <span className="inner">Open Scheduler</span>
-            </a>
+            </motion.a>
 
             <p className="mt-3 text-xs text-foreground/60">
               The embed uses Calendly cookies. Use the button if you prefer the
