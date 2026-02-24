@@ -1,118 +1,129 @@
-// components/sections/Contact.tsx
 "use client";
-
 import { motion } from "framer-motion";
-import Reveal from "../reveal";
+import ContactForm from "../ContactForm";
 
-const CAL_URL ="https://calendly.com/hadiaaanvd/30min";
+const CAL_URL = "https://calendly.com/hadiaaanvd/30min";
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-gradient  section-compact"  data-variant="c">
+    <section id="contact" className="relative py-20 md:py-32 overflow-hidden bg-brand-black">
+      {/* Gradient background - Right to Left */}
+      <div className="absolute inset-0 bg-linear-to-l from-violet-950/15 via-purple-950/8 to-cyan-950/12 pointer-events-none" />
       
-      <div className="lg:container mx-auto page-gutters">
-        <div className="contact-grid">
-     
-          <motion.aside
-            className="contact-rail bg-background/30 "
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          >
-            
-            <Reveal>
-              <p className="eyebrow">Scheduling</p>
-              <h2 className="mt-2 headline-balance">
-                <span>Let's <span className="text-primary">Talk</span></span>
-              </h2>
-              <p className="mt-3 text-foreground/85">
-                Schedule a live walkthrough and leave with concrete next steps
-              </p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                <span className="chip">Cross campus discovery</span>
-                <span className="chip">Course mapping</span>
-                <span className="chip">Alliance operations</span>
-              </div>
-            </Reveal>
+      {/* Animated background */}
+      <motion.div
+        className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full"
+        style={{
+          background: "radial-gradient(circle, rgba(88,0,255,0.1) 0%, transparent 70%)",
+          filter: "blur(80px)",
+        }}
+        animate={{
+          scale: [1, 1.2, 1],
+          x: [0, 30, 0],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
 
-            <div className="hr-soft my-6" />
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6">
+            Let's{" "}
+            <span className="bg-clip-text text-transparent bg-linear-to-r from-cyan-400 to-violet-600">
+              Connect
+            </span>
+          </h2>
+          <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto">
+            Schedule a demo or send us a message. We're here to help transform your alliance experience.
+          </p>
+        </motion.div>
 
-            <div className="flex items-center gap-2">
-              <span className="stat-badge">Live demo</span>
-              <span className="stat-badge">30 minutes</span>
-              <span className="stat-badge">Google Meet</span>
-            </div>
-
-            <ul className="mt-6 space-y-5">
-              <li className="benefit">
-                <span className="benefit-dot" />
-                <div>
-                  <p className="benefit-title">Understand the system</p>
-                  <p className="benefit-copy">
-                    See one connected campus for students and staff
-                  </p>
-                </div>
-              </li>
-              <li className="benefit">
-                <span className="benefit-dot" />
-                <div>
-                  <p className="benefit-title">Cut admin loops</p>
-                  <p className="benefit-copy">
-                    Coordination centralised without more tools
-                  </p>
-                </div>
-              </li>
-              <li className="benefit">
-                <span className="benefit-dot" />
-                <div>
-                  <p className="benefit-title">Outcome first</p>
-                  <p className="benefit-copy">
-                    Finish with a single recommended next step
-                  </p>
-                </div>
-              </li>
-            </ul>
-
-            <a
-              href={CAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary-gradient btn-md mt-7 text-xs justify-center"
-            >
-              <span className="inner">Open Scheduler</span>
-            </a>
-
-            <p className="mt-3 text-xs text-foreground/60">
-              The embed uses Calendly cookies. Use the button if you prefer the
-              standalone page.
-            </p>
-          </motion.aside>
-
+        {/* Two Column Layout */}
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Contact Form */}
           <motion.div
-            className="contact-embed relative"
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6 }}
           >
-            <div id="cal-skeleton" className="w-full max-h-[600px] md:max-h-[720px] rounded-2xl bg-white/5 animate-pulse" />
-            <div className="embed-frame">
-              <iframe
-                title="Synapse Scheduling"
-                src={CAL_URL}
-                loading="lazy"
-                className="w-full  h-[600px] md:h-[720px]"
-                onLoad={() => {
-                  const el = document.getElementById("cal-skeleton");
-                  if (el) el.style.display = "none";
-                }}
-              />
+            <ContactForm />
+          </motion.div>
+
+          {/* Calendar Section */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:sticky lg:top-24"
+          >
+            <div className="p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-3">Schedule a Live Demo</h3>
+              <p className="text-white/60 mb-6">
+                Book a 30-minute walkthrough and see the platform in action
+              </p>
+
+              {/* Benefits */}
+              <div className="space-y-4 mb-8">
+                {[
+                  "See one connected campus for students and staff",
+                  "Coordinate courses without administrative friction",
+                  "Get a tailored recommendation for next steps",
+                ].map((benefit, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="mt-0.5 w-5 h-5 rounded-full bg-cyan-500/20 border border-cyan-500/50 flex items-center justify-center shrink-0">
+                      <svg className="w-3 h-3 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p className="text-white/70 text-sm">{benefit}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Calendly Link Button */}
+              <motion.a
+                href={CAL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full btn-secondary-gradient btn-lg text-center"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                <span className="inner">Schedule Your Demo</span>
+              </motion.a>
+
+              <p className="mt-4 text-xs text-white/40 text-center">
+                Opens in a new window
+              </p>
             </div>
-            <div aria-hidden className="embed-aura" />
           </motion.div>
         </div>
       </div>
+
+      {/* Gradient transition to footer */}
+      <motion.div
+        className="absolute bottom-0 left-0 right-0 h-64 pointer-events-none"
+        style={{
+          background: "linear-gradient(to bottom, transparent 0%, rgba(88, 0, 255, 0.05) 30%, rgba(1, 215, 255, 0.08) 100%)"
+        }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, delay: 0.3 }}
+      />
     </section>
   );
 }
