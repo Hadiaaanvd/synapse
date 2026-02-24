@@ -34,12 +34,12 @@ export default function Vision() {
         Our Vision
       </motion.p>
 
-      <div className="lg:container page-gutters flex flex-col md:flex-row gap-12 md:gap-16 relative z-1">
-        <Reveal className="w-full md:w-1/2 max-w-[680px] flex flex-col gap-8">
+      <div className="lg:container page-gutters flex flex-col gap-12 relative z-1">
+        <Reveal className="w-full max-w-[780px] flex flex-col gap-8">
           <h2>
             Breaking borders in higher
             <motion.span
-              className="text-primary"
+              className="gradient-text"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -49,7 +49,7 @@ export default function Vision() {
             </motion.span>
           </h2>
           <motion.div
-            className="text-sm flex flex-col gap-4 text-foreground lg:text-xl leading-relaxed"
+            className="text-sm flex flex-col gap-4 text-foreground/90 lg:text-xl leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -67,9 +67,9 @@ export default function Vision() {
         </Reveal>
       </div>
 
-      <div className="flex justify-end">
+      <div className="flex justify-end mt-16">
         <motion.div
-          className="vision-pill-gradient w-[70vw] mt-20 md:w-[50vw] lg:w-[40vw] md:block max-w-full h-30 md:h-42 lg:h-68"
+          className="vision-pill-gradient w-[70vw] md:w-[50vw] lg:w-[40vw] md:block max-w-full h-30 md:h-42 lg:h-68"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}

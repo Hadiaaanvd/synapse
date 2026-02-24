@@ -1,89 +1,72 @@
 "use client";
 import { motion } from "framer-motion";
-import Reveal from "../reveal";
 import TeamMemberCard, { TeamMember } from "../TeamMemberCard";
 
 const team: TeamMember[] = [
-  { name: "Nandor Krizbai", imageSource: "/team/nandor.jpg", description: "Nandor builds robust, scalable systems that keep Synapse running smoothly. His expertise in distributed architectures and performance optimization brings reliability to every project.", githubUrl: "https://github.com/nandor23" },
-  { name: "Hadia Naveed", imageSource: "/team/hadia.jpeg", description: "Hadia blends creativity with clean engineering. She crafts interfaces that not only work beautifully but feel effortless, bringing a fresh, user-focused energy to Synapse.", linkedinUrl: "https://linkedin.com/in/hadia-naveed-b316911b5", githubUrl: "https://github.com/Hadiaaanvd" },
-  { name: "Ricky Francis Rozario", imageSource: "/team/ricky.jpg", description: "Ricky turns complex ideas into elegant, reliable software. His wide-ranging experience from university systems to modern web apps keeps the team aligned and delivery sharp.", linkedinUrl: "https://www.linkedin.com/in/ricky-francis/", githubUrl: "https://github.com/rickyfrancis" },
-  { name: "A F M Soyeb Chowdhury", imageSource: "/team/soyeb.jpg", description: "Soyeb's balanced approach to academic insight and professional expertise to guide Synapse with clarity, precision, and purpose.", linkedinUrl: "https://www.linkedin.com/in/a-f-m-soyeb-chowdhury-972a5099/", githubUrl: "https://github.com/ifrat" },
-  { name: "Dinesh Prabhakaran", imageSource: "/team/dinesh.jpg", description: "Curious and inventive, Dinesh builds modern, high-impact web experiences. His enthusiasm for learning and experimenting helps Synapse stay ahead of the curve.", linkedinUrl: "https://www.linkedin.com/in/dinesh-prabhakaran-827690229", githubUrl: "https://github.com/DineshPrabhakaran22" },
+  { name: "Nandor Krizbai", imageSource: "/team/nandor.jpg", description: "Builds robust, scalable systems that keep Synapse running smoothly with expert-level distributed architectures.", githubUrl: "https://github.com/nandor23" },
+  { name: "Hadia Naveed", imageSource: "/team/hadia.jpeg", description: "Crafts beautiful interfaces that work effortlessly, bringing fresh user-focused energy to every project.", linkedinUrl: "https://linkedin.com/in/hadia-naveed-b316911b5", githubUrl: "https://github.com/Hadiaaanvd" },
+  { name: "Ricky Francis Rozario", imageSource: "/team/ricky.jpg", description: "Transforms complex ideas into elegant software, keeping the team aligned and delivery sharp.", linkedinUrl: "https://www.linkedin.com/in/ricky-francis/", githubUrl: "https://github.com/rickyfrancis" },
+  { name: "A F M Soyeb Chowdhury", imageSource: "/team/soyeb.jpg", description: "Guides Synapse with balanced academic insight and professional expertise, clarity and precision.", linkedinUrl: "https://www.linkedin.com/in/a-f-m-soyeb-chowdhury-972a5099/", githubUrl: "https://github.com/ifrat" },
+  { name: "Dinesh Prabhakaran", imageSource: "/team/dinesh.jpg", description: "Builds modern, high-impact web experiences with curiosity and experimentation.", linkedinUrl: "https://www.linkedin.com/in/dinesh-prabhakaran-827690229", githubUrl: "https://github.com/DineshPrabhakaran22" },
 ];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.2
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-    scale: 0.95
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.6,
-      ease: [0.22, 1, 0.36, 1] as [number, number, number, number]
-    }
-  }
-};
 
 export default function TeamSection() {
   return (
-    <section id="team" className="section-gradient text-center noise py-24 sm:py-48 relative overflow-hidden" data-variant="b">
-      {/* Background animated accent */}
+    <section id="team" className="relative py-20 md:py-32 overflow-hidden bg-linear-to-b from-brand-black to-gray-900">
+      {/* Animated background */}
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-violet/10 rounded-full blur-3xl"
+        className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full"
+        style={{
+          background: "radial-gradient(circle, rgba(1,215,255,0.08) 0%, transparent 70%)",
+          filter: "blur(80px)",
+        }}
         animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.2, 0.3, 0.2],
+          scale: [1, 1.2, 1],
+          x: [0, -30, 0],
         }}
         transition={{
-          duration: 12,
+          duration: 10,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
       />
 
-      <motion.p
-        className="text-center mb-3 eyebrow"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        Core Members
-      </motion.p>
-
-      <Reveal>
-        <h2 className="text-center">Meet our <span className="text-primary">Team</span></h2>
-      </Reveal>
-
-      <div className="mt-20 mx-auto max-w-[1400px] px-4">
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        {/* Header */}
         <motion.div
-          className="flex flex-wrap justify-center gap-x-4 md:gap-x-6 xl:gap-x-6 gap-y-10"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          {team.map((m, i) => (
-            <motion.div key={i} variants={itemVariants}>
-              <TeamMemberCard member={m} />
+          <p className="text-sm uppercase tracking-wider text-cyan-400 mb-4">Core Team</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6">
+            Meet the{" "}
+            <span className="bg-clip-text text-transparent bg-linear-to-r from-cyan-400 to-violet-600">
+              Innovators
+            </span>
+          </h2>
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">
+            Passionate engineers dedicated to transforming higher education through technology
+          </p>
+        </motion.div>
+
+        {/* Team Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {team.map((member, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={team.length % 3 === 2 && index >= team.length - 2 ? "md:col-span-1 lg:last:col-start-2" : ""}
+            >
+              <TeamMemberCard member={member} />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
