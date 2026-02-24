@@ -12,7 +12,10 @@ const team: TeamMember[] = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="relative py-20 md:py-32 overflow-hidden bg-linear-to-b from-brand-black to-gray-900">
+    <section id="team" className="relative py-20 md:py-32 overflow-hidden bg-brand-black">
+      {/* Gradient background - Left to Right */}
+      <div className="absolute inset-0 bg-linear-to-r from-violet-950/20 via-purple-950/10 to-cyan-950/15 pointer-events-none" />
+      
       {/* Animated background */}
       <motion.div
         className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full"
@@ -52,8 +55,8 @@ export default function TeamSection() {
           </p>
         </motion.div>
 
-        {/* Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* Team Flex Layout */}
+        <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
           {team.map((member, index) => (
             <motion.div
               key={index}
@@ -61,7 +64,7 @@ export default function TeamSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={team.length % 3 === 2 && index >= team.length - 2 ? "md:col-span-1 lg:last:col-start-2" : ""}
+              className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
             >
               <TeamMemberCard member={member} />
             </motion.div>

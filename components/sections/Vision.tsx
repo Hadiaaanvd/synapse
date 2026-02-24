@@ -6,9 +6,12 @@ export default function Vision() {
   return (
     <section
       id="vision"
-      className="section-gradient section-spotlight section-spacing relative overflow-hidden"
+      className="section-gradient section-spotlight section-spacing relative overflow-hidden bg-brand-black"
       data-variant="c"
     >
+      {/* Gradient background - Left to Right */}
+      <div className="absolute inset-0 bg-linear-to-r from-violet-950/20 via-purple-950/10 to-cyan-950/15 pointer-events-none" />
+      
       {/* Animated background orb */}
       <motion.div
         className="absolute top-1/2 right-20 w-80 h-80 bg-brand-blue-light/15 rounded-full blur-3xl"

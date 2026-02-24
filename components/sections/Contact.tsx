@@ -1,15 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import ContactForm from "../ContactForm";
 
 const CAL_URL = "https://calendly.com/hadiaaanvd/30min";
 
 export default function Contact() {
-  const [calendlyLoaded, setCalendlyLoaded] = useState(false);
-
   return (
-    <section id="contact" className="relative py-20 md:py-32 overflow-hidden bg-linear-to-b from-gray-900 to-brand-black">
+    <section id="contact" className="relative py-20 md:py-32 overflow-hidden bg-brand-black">
+      {/* Gradient background - Right to Left */}
+      <div className="absolute inset-0 bg-linear-to-l from-violet-950/15 via-purple-950/8 to-cyan-950/12 pointer-events-none" />
+      
       {/* Animated background */}
       <motion.div
         className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full"
@@ -92,61 +92,21 @@ export default function Contact() {
                 ))}
               </div>
 
-              {/* Calendly Embed */}
-              <div className="relative rounded-2xl overflow-hidden bg-black min-h-[600px]">
-                {/* Loading skeleton - covers everything */}
-                {!calendlyLoaded && (
-                  <div className="absolute inset-0 z-20 bg-black">
-                    <div className="h-full w-full bg-linear-to-b from-gray-900 to-black p-6 space-y-4 animate-pulse">
-                      {/* Header skeleton */}
-                      <div className="flex items-center justify-between mb-8">
-                        <div className="h-8 w-32 bg-white/10 rounded"></div>
-                        <div className="h-8 w-24 bg-white/10 rounded"></div>
-                      </div>
-                      
-                      {/* Calendar title skeleton */}
-                      <div className="h-10 w-64 bg-white/10 rounded mx-auto mb-4"></div>
-                      <div className="h-4 w-48 bg-white/10 rounded mx-auto mb-8"></div>
-                      
-                      {/* Calendar grid skeleton */}
-                      <div className="space-y-3">
-                        <div className="grid grid-cols-7 gap-2">
-                          {[...Array(7)].map((_, i) => (
-                            <div key={i} className="h-8 bg-white/5 rounded"></div>
-                          ))}
-                        </div>
-                        <div className="grid grid-cols-7 gap-2">
-                          {[...Array(35)].map((_, i) => (
-                            <div key={i} className="h-12 bg-white/5 rounded"></div>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      {/* Shimmer effect */}
-                      <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
-                    </div>
-                  </div>
-                )}
-                
-                <iframe
-                  src={`${CAL_URL}?embed_domain=localhost&embed_type=Inline&hide_landing_page_details=1&hide_gdpr_banner=1&background_color=000000&text_color=ffffff&primary_color=06b6d4`}
-                  width="100%"
-                  height="600"
-                  frameBorder="0"
-                  loading="eager"
-                  title="Schedule a Meeting"
-                  onLoad={() => setCalendlyLoaded(true)}
-                  className={calendlyLoaded ? 'opacity-100' : 'opacity-0'}
-                  style={{
-                    background: '#000000',
-                    colorScheme: 'dark',
-                    transition: 'opacity 0.3s ease-in-out',
-                  }}
-                />
-              </div>
+              {/* Calendly Link Button */}
+              <motion.a
+                href={CAL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full btn-secondary-gradient btn-lg text-center"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                <span className="inner">Schedule Your Demo</span>
+              </motion.a>
 
               <p className="mt-4 text-xs text-white/40 text-center">
-                The embed uses Calendly cookies
+                Opens in a new window
               </p>
             </div>
           </motion.div>

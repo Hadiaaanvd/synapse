@@ -62,9 +62,12 @@ export default function Product() {
   return (
     <section
       id="product"
-      className="section-gradient section-spacing relative overflow-hidden"
+      className="section-gradient section-spacing relative overflow-hidden bg-brand-black"
       data-variant="a"
     >
+      {/* Gradient background - Right to Left */}
+      <div className="absolute inset-0 bg-linear-to-l from-violet-950/15 via-purple-950/8 to-cyan-950/12 pointer-events-none" />
+      
       {/* Background effects */}
       <motion.div
         className="absolute top-20 left-20 w-96 h-96 bg-brand-violet/10 rounded-full blur-3xl"
